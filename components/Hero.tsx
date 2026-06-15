@@ -21,10 +21,26 @@ export function Hero() {
       id="top"
       className="relative overflow-hidden px-6 pb-0 pt-24 lg:px-10"
     >
-      {/* Ambient glow */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
+      {/* Background video + tint */}
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+        <video
+          className="absolute inset-0 h-full w-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+        >
+          <source src="/hero-background.mp4" type="video/mp4" />
+        </video>
+        {/* Dark tint for legibility — heavier on the left where the text sits */}
+        <div className="absolute inset-0 bg-ink-950/75" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/70 to-ink-950/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink-950/60 via-transparent to-ink-950" />
+        {/* Subtle brand glow retained */}
         <div className="absolute left-1/4 top-1/3 h-[45vh] w-[45vh] -translate-x-1/2 rounded-full bg-accent/10 blur-[160px]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,#060608_90%)]" />
       </div>
 
       {/* ── Text block ─────────────────────────────────── */}
