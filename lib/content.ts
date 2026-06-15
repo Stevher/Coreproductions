@@ -26,9 +26,10 @@ export const heroWords = [
 
 export const hero = {
   eyebrow: "Cape Town · South Africa",
-  title: "Live events. Brand films. No compromise.",
+  title: "South Africa's full-spectrum production partner.",
+  subline: "Every cue, every cut. Delivered to the same standard.",
   body:
-    "Core Productions is a full-spectrum production company serving South Africa's leading corporates. We design and operate world-class live events, and we produce brand and corporate films from concept to final delivery. Two disciplines. One team. The same standard throughout.",
+    "Core Productions designs and operates world-class live events, and produces brand and corporate films from concept to final delivery. Two disciplines. One team. One standard.",
   ctaPrimary: "Start a project",
   ctaSecondary: "Explore our services",
 };
