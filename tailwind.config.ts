@@ -9,25 +9,28 @@ const config: Config = {
     extend: {
       colors: {
         ink: {
-          950: "#050505",
-          900: "#0a0a0b",
-          850: "#0f0f11",
-          800: "#16161a",
-          700: "#1f1f24",
+          950: "#060608",
+          900: "#0c0c10",
+          850: "#111116",
+          800: "#18181f",
+          700: "#22222c",
         },
+        // Champagne gold — prestige, premium, timeless
         accent: {
-          DEFAULT: "#ff4d2e",
-          soft: "#ff7a5c",
-          glow: "#ff4d2e",
+          DEFAULT: "#C9A86C",
+          light: "#DEC08A",
+          dark: "#A08450",
+          muted: "#8B7248",
         },
-        bone: "#f4f1ea",
+        bone: "#EDE9E0",
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
-        display: ["var(--font-display)", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "Georgia", "serif"],
       },
       letterSpacing: {
         tightest: "-0.04em",
+        display: "-0.01em",
       },
       keyframes: {
         "grain-shift": {
@@ -36,14 +39,14 @@ const config: Config = {
           "50%": { transform: "translate(1%, -2%)" },
           "75%": { transform: "translate(-1%, 2%)" },
         },
-        "marquee": {
+        marquee: {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
       },
       animation: {
         "grain-shift": "grain-shift 8s steps(4) infinite",
-        "marquee": "marquee 28s linear infinite",
+        marquee: "marquee 32s linear infinite",
       },
     },
   },

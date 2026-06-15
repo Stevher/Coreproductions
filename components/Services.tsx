@@ -5,27 +5,49 @@ import { AnimatePresence, motion } from "framer-motion";
 import { serviceCategories, type Service, type ServiceCategory } from "@/lib/content";
 import { Reveal, RevealText } from "./Reveal";
 
-function ServiceRow({ service, index }: { service: Service; index: number }) {
+function Chevron({ open }: { open: boolean }) {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      className={`shrink-0 transition-transform duration-400 ${open ? "rotate-180" : ""}`}
+    >
+      <path
+        d="M2 5L7 10L12 5"
+        stroke="currentColor"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function ServiceRow({ service }: { service: Service }) {
   const [open, setOpen] = useState(false);
 
   return (
     <div
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
-      className="group relative border-t border-white/8 transition-colors duration-500 hover:bg-white/[0.025]"
+      className="group relative border-t border-white/[0.07] transition-colors duration-500 hover:bg-white/[0.02]"
     >
-      <span className="absolute left-0 top-0 h-px w-0 bg-accent transition-all duration-500 group-hover:w-full" />
+      {/* Top accent line on hover */}
+      <span className="absolute left-0 top-0 h-px w-0 bg-accent/60 transition-all duration-500 group-hover:w-full" />
 
       <button
         onClick={() => setOpen((v) => !v)}
-        className="flex w-full items-start gap-4 px-1 py-6 text-left"
+        className="flex w-full items-start gap-5 py-6 text-left"
       >
-        <span className="mt-1 font-mono text-xs text-accent/50">
+        {/* Serif italic number */}
+        <span className="num-serif mt-0.5 w-6 shrink-0 text-sm text-accent/50">
           {service.number}
         </span>
 
-        <div className="flex-1">
-          <h4 className="text-lg font-semibold tracking-tight text-bone transition-transform duration-500 group-hover:translate-x-1.5 md:text-xl">
+        <div className="flex-1 min-w-0">
+          <h4 className="text-base font-semibold tracking-tight text-bone transition-transform duration-500 group-hover:translate-x-1 md:text-lg">
             {service.title}
           </h4>
 
@@ -38,16 +60,16 @@ function ServiceRow({ service, index }: { service: Service; index: number }) {
                 transition={{ duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
                 className="overflow-hidden"
               >
-                <p className="pt-3 text-sm leading-relaxed text-bone/55">
+                <p className="pt-3 text-sm leading-relaxed text-bone/50">
                   {service.summary}
                 </p>
-                <ul className="mt-4 space-y-1.5">
+                <ul className="mt-4 space-y-2">
                   {service.points.map((point) => (
                     <li
                       key={point}
-                      className="flex items-start gap-2.5 text-sm text-bone/45"
+                      className="flex items-start gap-3 text-sm text-bone/40"
                     >
-                      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-accent/70" />
+                      <span className="mt-2 h-px w-4 shrink-0 bg-accent/50" />
                       {point}
                     </li>
                   ))}
@@ -57,12 +79,8 @@ function ServiceRow({ service, index }: { service: Service; index: number }) {
           </AnimatePresence>
         </div>
 
-        <span
-          className={`mt-0.5 text-xl text-accent/60 transition-all duration-300 ${
-            open ? "rotate-45 text-accent" : ""
-          }`}
-        >
-          +
+        <span className={`mt-1 text-bone/30 transition-colors duration-300 ${open ? "text-accent" : ""}`}>
+          <Chevron open={open} />
         </span>
       </button>
     </div>
@@ -71,42 +89,34 @@ function ServiceRow({ service, index }: { service: Service; index: number }) {
 
 function CategoryBlock({
   category,
-  align,
   delay,
+  primary,
 }: {
   category: ServiceCategory;
-  align: "left" | "right";
   delay: number;
+  primary: boolean;
 }) {
   return (
     <Reveal delay={delay} className="flex flex-col">
       {/* Category header */}
-      <div
-        className={`mb-8 border-t-2 pt-8 ${
-          align === "left" ? "border-accent" : "border-bone/20"
-        }`}
-      >
-        <div className="mb-3 flex items-center gap-3">
-          <span className="font-mono text-xs text-accent/60">
-            {category.index}
-          </span>
-          <span className="h-px flex-1 bg-white/8" />
+      <div className={`mb-8 border-t-2 pt-8 ${primary ? "border-accent" : "border-white/15"}`}>
+        <div className="mb-4 flex items-center gap-3">
+          <span className="num-serif text-lg text-accent/60">{category.index}</span>
+          <span className="h-px flex-1 bg-white/[0.07]" />
         </div>
-        <h3 className="text-2xl font-bold tracking-tight text-bone md:text-3xl">
-          {category.title}
-        </h3>
-        <p className="mt-1.5 text-xs font-medium uppercase tracking-[0.2em] text-bone/40">
+        <h3 className="display-lg text-bone">{category.title}</h3>
+        <p className="mt-2 text-[11px] font-medium uppercase tracking-[0.28em] text-bone/35">
           {category.subtitle}
         </p>
-        <p className="mt-4 text-sm leading-relaxed text-bone/55">
+        <p className="mt-5 text-sm leading-relaxed text-bone/50">
           {category.description}
         </p>
       </div>
 
       {/* Service rows */}
-      <div className="border-b border-white/8">
-        {category.services.map((service, i) => (
-          <ServiceRow key={service.id} service={service} index={i} />
+      <div className="border-b border-white/[0.07]">
+        {category.services.map((service) => (
+          <ServiceRow key={service.id} service={service} />
         ))}
       </div>
     </Reveal>
@@ -115,16 +125,16 @@ function CategoryBlock({
 
 export function Services() {
   return (
-    <section id="services" className="relative px-6 py-28 lg:px-10 lg:py-40">
-      <div className="pointer-events-none absolute right-0 top-1/4 -z-10 h-[60vh] w-[40vw] rounded-full bg-accent/8 blur-[160px]" />
+    <section id="services" className="relative px-6 py-32 lg:px-10 lg:py-44">
+      <div className="pointer-events-none absolute right-0 top-1/3 -z-10 h-[60vh] w-[35vw] rounded-full bg-accent/5 blur-[180px]" />
 
       <div className="mx-auto max-w-7xl">
         {/* Section header */}
-        <div className="mb-16 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+        <div className="mb-20 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <Reveal>
-              <p className="mb-5 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.35em] text-accent">
-                <span className="h-px w-10 bg-accent/60" />
+              <p className="mb-6 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.38em] text-accent/80">
+                <span className="h-px w-10 bg-accent/50" />
                 What we do
               </p>
             </Reveal>
@@ -133,27 +143,24 @@ export function Services() {
             </h2>
           </div>
           <Reveal delay={0.2}>
-            <p className="max-w-sm text-sm leading-relaxed text-bone/50 lg:text-right">
+            <p className="max-w-xs text-sm leading-relaxed text-bone/40 lg:text-right">
               Hover or tap any service to see the full scope. All eight
-              capabilities are delivered by the same team to the same standard.
+              capabilities are delivered by the same team, to the same standard.
             </p>
           </Reveal>
         </div>
 
         {/* Two-pillar grid */}
-        <div className="grid gap-0 lg:grid-cols-2 lg:gap-16">
+        <div className="grid gap-16 lg:grid-cols-2 lg:gap-20">
           {serviceCategories.map((cat, i) => (
             <CategoryBlock
               key={cat.id}
               category={cat}
-              align={i === 0 ? "left" : "right"}
+              primary={i === 0}
               delay={i * 0.1}
             />
           ))}
         </div>
-
-        {/* Divider between pillars on mobile */}
-        <div className="mt-12 h-px bg-white/5 lg:hidden" />
       </div>
     </section>
   );

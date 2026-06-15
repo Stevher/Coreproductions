@@ -7,14 +7,14 @@ export function About() {
   return (
     <section
       id="about"
-      className="relative border-t border-white/5 px-6 py-28 lg:px-10 lg:py-40"
+      className="relative border-t border-white/[0.06] px-6 py-32 lg:px-10 lg:py-44"
     >
-      <div className="pointer-events-none absolute left-0 top-1/2 -z-10 h-[50vh] w-[40vw] -translate-y-1/2 rounded-full bg-accent/8 blur-[160px]" />
+      <div className="pointer-events-none absolute left-0 top-1/2 -z-10 h-[50vh] w-[35vw] -translate-y-1/2 rounded-full bg-accent/6 blur-[200px]" />
 
       <div className="mx-auto max-w-7xl">
         <Reveal>
-          <p className="mb-6 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.35em] text-accent">
-            <span className="h-px w-10 bg-accent/60" />
+          <p className="mb-6 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.38em] text-accent/80">
+            <span className="h-px w-10 bg-accent/50" />
             {about.eyebrow}
           </p>
         </Reveal>
@@ -23,32 +23,30 @@ export function About() {
           <RevealText text={about.title} />
         </h2>
 
-        <div className="mt-16 grid gap-14 lg:grid-cols-[1.5fr_1fr] lg:gap-24">
+        <div className="mt-20 grid gap-16 lg:grid-cols-[1.6fr_1fr] lg:gap-28">
           {/* Copy */}
-          <div className="space-y-7">
+          <div className="space-y-8">
             {about.paragraphs.map((p, i) => (
               <Reveal key={i} delay={i * 0.1}>
-                <p className="text-lg leading-relaxed text-bone/60">{p}</p>
+                <p className="text-lg leading-relaxed text-bone/55">{p}</p>
               </Reveal>
             ))}
           </div>
 
-          {/* Credentials grid */}
+          {/* Credentials */}
           <Reveal delay={0.15}>
-            <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/8 bg-white/5">
-              {about.credentials.map((c, i) => (
+            <div className="grid grid-cols-2 divide-x divide-y divide-white/[0.07] border border-white/[0.07]">
+              {about.credentials.map((c) => (
                 <div
                   key={c.label}
-                  className="group flex flex-col justify-between bg-ink-900/80 p-6 transition-colors duration-300 hover:bg-ink-800"
+                  className="flex flex-col justify-between p-7 transition-colors duration-300 hover:bg-white/[0.02]"
                 >
-                  <span className="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-bone/35">
+                  <span className="mb-6 text-[10px] font-medium uppercase tracking-[0.3em] text-bone/30">
                     {c.label}
                   </span>
                   <div>
-                    <div className="text-2xl font-bold text-bone md:text-3xl">
-                      {c.value}
-                    </div>
-                    <div className="mt-1 text-sm text-bone/45">{c.sub}</div>
+                    <div className="font-display text-3xl text-bone">{c.value}</div>
+                    <div className="mt-1.5 text-sm text-bone/40">{c.sub}</div>
                   </div>
                 </div>
               ))}

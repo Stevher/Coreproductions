@@ -7,51 +7,51 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative overflow-hidden border-t border-white/8 px-6 pt-24 lg:px-10">
+    <footer className="relative overflow-hidden border-t border-white/[0.06] px-6 pt-24 lg:px-10">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <div className="flex flex-col gap-10 pb-16 md:flex-row md:items-end md:justify-between">
             <div>
-              <a href="#top" className="flex items-center gap-2.5">
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-accent" />
-                </span>
-                <span className="text-sm font-semibold uppercase tracking-[0.2em] text-bone">
-                  Core<span className="text-accent">Productions</span>
-                </span>
+              <a
+                href="#top"
+                className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.22em] text-bone"
+              >
+                <span className="block h-3 w-px bg-accent" />
+                Core<span className="text-accent">Productions</span>
               </a>
-              <p className="mt-4 max-w-sm text-bone/50">
+              <p className="mt-5 max-w-sm text-bone/40 text-sm leading-relaxed">
                 {site.tagline} Audio visual, lighting, sound and video
-                production — {site.contact.location}.
+                production. {site.contact.location}.
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-x-8 gap-y-3">
+            <nav className="flex flex-wrap gap-x-8 gap-y-3">
               {nav.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-sm text-bone/60 transition-colors hover:text-accent"
+                  className="text-xs font-medium uppercase tracking-[0.2em] text-bone/40 transition-colors hover:text-accent"
                 >
                   {item.label}
                 </a>
               ))}
-            </div>
+            </nav>
           </div>
         </Reveal>
 
-        {/* Oversized wordmark */}
-        <div className="select-none border-t border-white/8 pt-10">
-          <h2 className="text-balance text-center text-[clamp(2.5rem,13vw,12rem)] font-extrabold leading-none tracking-tightest text-bone/[0.06]">
-            CORE PRODUCTIONS
+        {/* Oversized serif wordmark */}
+        <div className="select-none border-t border-white/[0.06] pt-10">
+          <h2
+            className="text-center text-[clamp(2.2rem,11vw,10rem)] font-display font-normal leading-none tracking-tightest text-bone/[0.04]"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            Core Productions
           </h2>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-4 py-10 text-sm text-bone/40 md:flex-row">
-          <p>
-            © {year} {site.name}. All rights reserved.
-          </p>
-          <p className="rounded-full border border-white/10 px-4 py-1.5 text-xs uppercase tracking-[0.2em]">
+        <div className="flex flex-col items-center justify-between gap-4 py-10 text-xs text-bone/30 md:flex-row">
+          <p>© {year} {site.name}. All rights reserved.</p>
+          <p className="border border-white/[0.08] px-4 py-1.5 text-[10px] uppercase tracking-[0.22em]">
             {site.bbbee}
           </p>
         </div>
