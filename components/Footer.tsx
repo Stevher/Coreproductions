@@ -12,12 +12,13 @@ export function Footer() {
         <Reveal>
           <div className="flex flex-col gap-10 pb-16 md:flex-row md:items-end md:justify-between">
             <div>
-              <a
-                href="#top"
-                className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.22em] text-bone"
-              >
-                <span className="block h-3 w-px bg-accent" />
-                Core<span className="text-accent">Productions</span>
+              <a href="#top" className="inline-flex items-center" aria-label="Core Productions — home">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/logo-light.svg"
+                  alt="Core Productions"
+                  className="h-9 w-auto"
+                />
               </a>
               <p className="mt-5 max-w-sm text-bone/40 text-sm leading-relaxed">
                 {site.tagline} Audio visual, lighting, sound and video
