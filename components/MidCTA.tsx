@@ -15,7 +15,8 @@ export function MidCTA() {
             {/* Top — headline + CTA */}
             <div className="relative flex flex-col gap-8 p-8 md:flex-row md:items-end md:justify-between md:p-12">
               <div className="max-w-2xl">
-                <p className="mb-4 text-xs font-medium uppercase tracking-[0.34em] text-accent">
+                <p className="mb-4 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.38em] text-accent">
+                  <span className="h-px w-10 bg-accent/30" />
                   {midCTA.eyebrow}
                 </p>
                 <h2 className="display-lg text-balance text-bone">{midCTA.title}</h2>

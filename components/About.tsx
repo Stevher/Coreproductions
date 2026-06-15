@@ -13,11 +13,11 @@ export function About() {
 
       <div className="mx-auto max-w-7xl">
         <Reveal>
-          <p className="mb-5 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.38em] text-accent">
+          <p className="mb-4 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.38em] text-accent">
             <span className="h-px w-10 bg-accent/30" />
             {about.eyebrow}
           </p>
-          <h2 className="display-lg max-w-4xl text-balance text-bone">
+          <h2 className="display-lg max-w-3xl text-balance text-bone">
             <RevealText text={about.title} />
           </h2>
         </Reveal>

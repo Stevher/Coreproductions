@@ -36,9 +36,9 @@ function CategoryBlock({ category, index }: { category: ServiceCategory; index: 
         {/* Category header */}
         <div className={`mb-8 border-t-2 pt-6 ${index === 0 ? "border-accent" : "border-accent/40"}`}>
           <div className="flex items-baseline gap-4 mb-3">
-            <span className="num-serif text-3xl text-accent">{category.index}</span>
+            <span className="num-serif text-2xl text-accent">{category.index}</span>
             <div>
-              <h3 className="display-lg text-bone">{category.title}</h3>
+              <h3 className="display-md text-bone">{category.title}</h3>
               <p className="mt-1 text-[11px] font-medium uppercase tracking-[0.28em] text-bone/30">
                 {category.subtitle}
               </p>

@@ -17,9 +17,7 @@ export default function TermsPage() {
           <p className="mb-4 text-xs font-medium uppercase tracking-[0.3em] text-accent">
             Legal
           </p>
-          <h1 className="font-display text-5xl text-bone lg:text-6xl">
-            Terms of Service
-          </h1>
+          <h1 className="display-lg text-bone">Terms of Service</h1>
           <p className="mt-4 text-sm text-bone/40">
             Last updated: June 2026 &nbsp;·&nbsp; Core Productions (Pty) Ltd
           </p>

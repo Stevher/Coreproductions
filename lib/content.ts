@@ -48,7 +48,7 @@ export const hero = {
 
 export const about = {
   eyebrow: "Who we are",
-  title: "South Africa's full-spectrum production partner — live events and video, under one roof.",
+  title: "Live events and video — under one roof.",
   paragraphs: [
     "Core Productions was built on a single conviction: that a production company should be the last thing a client worries about. We take full technical and operational responsibility for every production we run — audio visual, sound, lighting, set design, compliance documentation, crew management and logistics — so your team can focus on the event, not the machinery behind it.",
     "Our work spans annual general meetings, investor days and roadshows, industry congresses, product launches and national conferences across every key sector. We are the crew that walks in calm when everyone else is under pressure — because we have solved the problem before.",
