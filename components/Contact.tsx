@@ -30,14 +30,14 @@ export function Contact() {
           {/* Left — copy + contact details */}
           <div>
             <Reveal>
-              <p className="mb-6 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.38em] text-accent">
+              <p className="mb-5 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.38em] text-accent">
                 <span className="h-px w-10 bg-accent/30" />
                 {cta.eyebrow}
               </p>
+              <h2 className="display-lg text-balance text-bone">
+                <RevealText text={cta.title} />
+              </h2>
             </Reveal>
-            <h2 className="display-lg text-balance text-bone">
-              <RevealText text={cta.title} />
-            </h2>
             <Reveal delay={0.2}>
               <p className="mt-6 max-w-md text-lg leading-relaxed text-bone/50">
                 {cta.body}
@@ -92,7 +92,7 @@ export function Contact() {
           <Reveal delay={0.15}>
             <form
               onSubmit={handleSubmit}
-              className="border border-white/[0.08] bg-ink-900/40 p-6 md:p-8"
+              className="rounded-2xl border border-white/[0.08] bg-ink-900/40 p-6 md:p-8"
             >
               <div className="space-y-6">
                 <Field name="name" label="Full name" type="text" required />
@@ -110,7 +110,7 @@ export function Contact() {
                     name="message"
                     rows={4}
                     required
-                    className="w-full resize-none border border-white/[0.08] bg-ink-950/70 px-4 py-3.5 text-sm text-bone outline-none transition-colors placeholder:text-bone/25 focus:border-accent/40"
+                    className="w-full resize-none rounded-xl border border-white/[0.08] bg-ink-950/70 px-4 py-3.5 text-sm text-bone outline-none transition-colors placeholder:text-bone/25 focus:border-accent/40"
                     placeholder="A conference, a product launch, a brand film, or all three…"
                   />
                 </div>
@@ -174,7 +174,7 @@ function Field({
         name={name}
         type={type}
         required={required}
-        className="w-full border border-white/[0.08] bg-ink-950/70 px-4 py-3.5 text-sm text-bone outline-none transition-colors placeholder:text-bone/25 focus:border-accent/40"
+        className="w-full rounded-xl border border-white/[0.08] bg-ink-950/70 px-4 py-3.5 text-sm text-bone outline-none transition-colors placeholder:text-bone/25 focus:border-accent/40"
       />
     </div>
   );

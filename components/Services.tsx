@@ -50,7 +50,7 @@ function CategoryBlock({ category, index }: { category: ServiceCategory; index: 
         </div>
 
         {/* Service card grid — 3 columns on desktop, 2 on tablet */}
-        <div className="grid border-l border-t border-white/[0.07] sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid overflow-hidden rounded-2xl border-l border-t border-white/[0.07] sm:grid-cols-2 lg:grid-cols-3">
           {category.services.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}

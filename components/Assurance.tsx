@@ -75,7 +75,7 @@ export function Assurance() {
         </div>
 
         {/* Standards grid */}
-        <div className="grid gap-px bg-white/[0.06] sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-px overflow-hidden rounded-2xl bg-white/[0.06] sm:grid-cols-2 lg:grid-cols-3">
           {assurance.items.map((item, i) => (
             <Reveal key={item.title} delay={i * 0.06}>
               <div className="group flex h-full flex-col bg-ink-950 p-7 transition-all duration-300 hover:bg-ink-900/80 lg:p-8">
@@ -89,11 +89,13 @@ export function Assurance() {
           ))}
         </div>
 
-        {/* Bottom note */}
+        {/* Bottom note — pill */}
         <Reveal delay={0.3}>
-          <p className="mt-8 text-center text-xs text-bone/30 uppercase tracking-[0.22em]">
-            Documentation available on request · Provided as standard to venue operators and principal contractors
-          </p>
+          <div className="mt-8 flex justify-center">
+            <p className="rounded-full border border-white/[0.08] bg-ink-950/60 px-6 py-2.5 text-center text-[11px] uppercase tracking-[0.22em] text-bone/40">
+              Documentation available on request · Provided as standard to venue operators &amp; principal contractors
+            </p>
+          </div>
         </Reveal>
       </div>
     </section>

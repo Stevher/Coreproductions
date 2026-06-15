@@ -13,17 +13,16 @@ export function About() {
 
       <div className="mx-auto max-w-7xl">
         <Reveal>
-          <p className="mb-6 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.38em] text-accent">
+          <p className="mb-5 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.38em] text-accent">
             <span className="h-px w-10 bg-accent/30" />
             {about.eyebrow}
           </p>
+          <h2 className="display-lg max-w-4xl text-balance text-bone">
+            <RevealText text={about.title} />
+          </h2>
         </Reveal>
 
-        <h2 className="display-lg max-w-4xl text-balance text-bone">
-          <RevealText text={about.title} />
-        </h2>
-
-        <div className="mt-12 grid gap-12 lg:grid-cols-[1.6fr_1fr] lg:gap-20">
+        <div className="mt-10 grid gap-12 lg:grid-cols-[1.6fr_1fr] lg:gap-20">
           {/* Copy */}
           <div className="space-y-8">
             {about.paragraphs.map((p, i) => (
@@ -35,7 +34,7 @@ export function About() {
 
           {/* Credentials */}
           <Reveal delay={0.15}>
-            <div className="grid grid-cols-2 divide-x divide-y divide-white/[0.07] border border-white/[0.07]">
+            <div className="grid grid-cols-2 divide-x divide-y divide-white/[0.07] overflow-hidden rounded-2xl border border-white/[0.07]">
               {about.credentials.map((c) => (
                 <div
                   key={c.label}

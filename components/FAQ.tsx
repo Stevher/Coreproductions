@@ -10,7 +10,7 @@ function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
 
   return (
     <Reveal delay={index * 0.04}>
-      <div className="border-t border-white/[0.07]">
+      <div className={index === 0 ? "" : "border-t border-white/[0.07]"}>
         <button
           onClick={() => setOpen((v) => !v)}
           className="flex w-full items-start justify-between gap-8 py-6 text-left"
@@ -65,14 +65,14 @@ export function FAQ() {
           {/* Left — sticky heading */}
           <div className="lg:sticky lg:top-28 lg:self-start">
             <Reveal>
-              <p className="mb-6 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.38em] text-accent">
+              <p className="mb-5 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.38em] text-accent">
                 <span className="h-px w-10 bg-accent/30" />
                 {faq.eyebrow}
               </p>
+              <h2 className="display-lg text-balance text-bone">
+                <RevealText text={faq.title} />
+              </h2>
             </Reveal>
-            <h2 className="display-lg text-balance text-bone">
-              <RevealText text={faq.title} />
-            </h2>
             <Reveal delay={0.2}>
               <p className="mt-6 max-w-xs text-base leading-relaxed text-bone/40">
                 Can&apos;t find the answer you need? Contact us directly and we
@@ -91,7 +91,7 @@ export function FAQ() {
           </div>
 
           {/* Right — accordion */}
-          <div className="border-b border-white/[0.07]">
+          <div className="rounded-2xl border border-white/[0.07] bg-ink-950/40 px-6 lg:px-8">
             {faq.items.map((item, i) => (
               <FAQItem key={i} q={item.q} a={item.a} index={i} />
             ))}

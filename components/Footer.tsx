@@ -56,7 +56,7 @@ export function Footer() {
           <div className="flex items-center gap-6">
             <a href="/privacy" className="transition-colors hover:text-bone/55">Privacy Policy</a>
             <a href="/terms" className="transition-colors hover:text-bone/55">Terms of Service</a>
-            <p className="border border-white/[0.08] px-4 py-1.5 text-[10px] uppercase tracking-[0.22em]">
+            <p className="rounded-full border border-white/[0.08] px-4 py-1.5 text-[10px] uppercase tracking-[0.22em]">
               {site.bbbee}
             </p>
           </div>
