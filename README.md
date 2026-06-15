@@ -32,8 +32,7 @@ updated without touching components.
 
 ### Before launch
 
-- Replace the placeholder email `hello@coreproductions.co.za` in
-  `lib/content.ts` with the real inbox.
+- Contact email is set to `bernard@coreproductions.co.za` in `lib/content.ts`.
 - Add social links / a physical address if desired (the structure is in place
   in `lib/content.ts` and `components/Footer.tsx`).
 - Swap in real photography/video for richer hero and section backgrounds.

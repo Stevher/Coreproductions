@@ -8,7 +8,7 @@ export const site = {
   // Contact details reconstructed from the existing site. Update the email
   // placeholder below with the real inbox before launch.
   contact: {
-    email: "hello@coreproductions.co.za",
+    email: "bernard@coreproductions.co.za",
     phoneOffice: "021 551 6690",
     phoneOfficeHref: "tel:+27215516690",
     phoneAfterHours: "083 737 5131",
