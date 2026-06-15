@@ -13,8 +13,8 @@ export function About() {
 
       <div className="mx-auto max-w-7xl">
         <Reveal>
-          <p className="mb-6 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.38em] text-accent-tint">
-            <span className="h-px w-10 bg-accent-tint/60" />
+          <p className="mb-6 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.38em] text-accent">
+            <span className="h-px w-10 bg-accent/30" />
             {about.eyebrow}
           </p>
         </Reveal>
@@ -45,7 +45,7 @@ export function About() {
                     {c.label}
                   </span>
                   <div>
-                    <div className="font-display text-3xl text-accent-tint">{c.value}</div>
+                    <div className="font-display text-3xl text-accent">{c.value}</div>
                     <div className="mt-1.5 text-sm text-bone/40">{c.sub}</div>
                   </div>
                 </div>

@@ -30,8 +30,8 @@ export function Contact() {
           {/* Left — copy + contact details */}
           <div>
             <Reveal>
-              <p className="mb-6 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.38em] text-accent-tint">
-                <span className="h-px w-10 bg-accent-tint/60" />
+              <p className="mb-6 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.38em] text-accent">
+                <span className="h-px w-10 bg-accent/30" />
                 {cta.eyebrow}
               </p>
             </Reveal>

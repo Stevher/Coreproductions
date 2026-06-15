@@ -15,8 +15,8 @@ export function Process() {
           {/* Left — sticky heading */}
           <div className="lg:sticky lg:top-28 lg:self-start">
             <Reveal>
-              <p className="mb-6 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.38em] text-accent-tint">
-                <span className="h-px w-10 bg-accent-tint/60" />
+              <p className="mb-6 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.38em] text-accent">
+                <span className="h-px w-10 bg-accent/30" />
                 {process.eyebrow}
               </p>
             </Reveal>
@@ -40,7 +40,7 @@ export function Process() {
                 <Reveal key={step.number} delay={i * 0.08}>
                   <div className="group relative flex gap-7 border border-white/[0.07] bg-ink-950/60 p-6 transition-all duration-500 hover:border-accent/25 hover:bg-ink-900/60 md:p-7">
                     {/* Step number — serif italic, large */}
-                    <span className="num-serif mt-0.5 shrink-0 text-3xl leading-none text-accent-tint/60 transition-colors duration-300 group-hover:text-accent">
+                    <span className="num-serif mt-0.5 shrink-0 text-3xl leading-none text-accent/40 transition-colors duration-300 group-hover:text-accent">
                       {step.number}
                     </span>
                     <div>

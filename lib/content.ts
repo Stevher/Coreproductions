@@ -52,8 +52,8 @@ export const about = {
     "South Africa's full-spectrum production partner — live events and video, under one roof.",
   paragraphs: [
     "Core Productions was built on a simple conviction: that technical excellence and creative integrity should never be in tension. We deliver bespoke solutions for corporate and blue-chip clients across the full scope of live production — audio visual systems, professional sound, intelligent lighting, IT infrastructure and custom set design.",
-    "Our portfolio spans product launches, annual general meetings, roadshows, live concerts, national conferences and international congresses. We are the crew that walks in calm when everyone else is under pressure, because we have solved the problem before.",
-    "Our video division extends that same discipline to the screen. From the first storyboard to the final colour grade, we produce brand films, corporate video, testimonial content and event highlights to broadcast standard — so your story has lasting impact long after the event ends.",
+    "Our portfolio spans AGMs for JSE-listed companies, investor days and roadshows for major financial services groups, product launches for multinational pharmaceutical brands and national conferences across every key industry sector. We are the crew that walks in calm when everyone else is under pressure — because we have solved the problem before.",
+    "Our video division extends that same discipline to the screen. From the first storyboard to the final colour grade, we produce brand films, executive communications, investor-facing content, corporate video and event highlights to broadcast standard — so your story carries the same weight on screen as it did in the room.",
   ],
   credentials: [
     {
@@ -62,9 +62,9 @@ export const about = {
       sub: "QSE contributor",
     },
     {
-      label: "Client base",
-      value: "Corporate",
-      sub: "Blue-chip & enterprise",
+      label: "Established",
+      value: "2014",
+      sub: "12 years in operation",
     },
     {
       label: "Capability",
@@ -270,3 +270,61 @@ export const nav = [
   { label: "Process", href: "#process" },
   { label: "Contact", href: "#contact" },
 ];
+
+export const clients = {
+  label: "Selected clients",
+  names: [
+    "Momentum",
+    "PSG",
+    "Standard Bank",
+    "Novo Nordisk",
+    "Pharma Dynamics",
+  ],
+};
+
+export const stats = [
+  { value: "2014", label: "Founded", sub: "12 years in operation" },
+  { value: "500+", label: "Live events", sub: "Nationally produced" },
+  { value: "200+", label: "Video productions", sub: "Brand to broadcast" },
+  { value: "80+", label: "Clients served", sub: "Active relationships" },
+];
+
+export const midCTA = {
+  eyebrow: "Proven at scale",
+  title: "The production partner that enterprise trusts.",
+  body: "From the AGM of a JSE-listed company to the product launch of a global pharmaceutical brand — we bring the same rigour, the same crew and the same standard to every production.",
+  ctaPrimary: "Start a project",
+  ctaAlt: "021 551 6690",
+  ctaAltHref: "tel:+27215516690",
+};
+
+export const faq = {
+  eyebrow: "Common questions",
+  title: "What you need to know.",
+  items: [
+    {
+      q: "What is the typical budget for a live event production?",
+      a: "Live event budgets vary with scale, venue and technical complexity. A mid-size corporate conference typically starts from R150 000 for full AV, sound and lighting. Large-scale congresses, AGMs and product launches are scoped individually. We provide itemised proposals at no charge — contact us with your brief and we respond with a realistic budget range within 48 hours.",
+    },
+    {
+      q: "How far in advance should we book?",
+      a: "For large-scale events — multi-day congresses, AGMs, roadshows with complex AV — we recommend 8 to 12 weeks lead time. This allows for venue surveys, technical design, custom fabrication and crew scheduling. Smaller corporate events can often be accommodated in 3 to 4 weeks. Video productions typically require 4 to 6 weeks from brief to first shoot day. Contact us early — a provisional hold costs nothing.",
+    },
+    {
+      q: "Do you operate outside Cape Town and Johannesburg?",
+      a: "Yes. Core Productions operates nationwide across South Africa. We have produced events in Durban, Sun City, Stellenbosch, George, East London and Port Elizabeth, as well as at international venues. Our full crew and equipment travel with every production — you are not billed for sub-standard local alternatives wherever the event is held.",
+    },
+    {
+      q: "Can you handle both the live event and the video production for the same project?",
+      a: "This is one of our core capabilities. Because both disciplines sit inside one team, your event capture, highlights reel and executive messaging can be planned and delivered as a single integrated brief — no agency hand-offs, no version control issues, no inconsistency in brand execution. We recommend briefing both requirements together for the best and most cost-effective outcome.",
+    },
+    {
+      q: "What types of events do you specialise in?",
+      a: "Our portfolio includes national corporate conferences, AGMs, investor days and roadshows, pharmaceutical congresses, product launches, awards ceremonies and live concerts. We have produced for JSE-listed companies, major financial services groups and multinational pharmaceutical brands. Every production is treated as if it cannot fail — because for our clients, it cannot.",
+    },
+    {
+      q: "What does a video production quote include?",
+      a: "A full production quote covers pre-production (scripting, storyboarding, location scouting, scheduling), production (crew, equipment, direction, on-set management) and post-production (editing, colour grading, sound mix, motion graphics and delivery in all required formats). We quote end-to-end — there are no surprises mid-production.",
+    },
+  ],
+};
