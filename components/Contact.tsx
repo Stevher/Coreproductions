@@ -57,18 +57,20 @@ export function Contact() {
                 {site.contact.offices.map((office) => (
                   <ContactItem key={office.city} label={office.city}>
                     {office.phone ? (
-                      <a
-                        href={office.phoneHref}
-                        className="text-bone transition-colors hover:text-accent"
-                      >
-                        {office.phone}
-                      </a>
+                      <>
+                        <a
+                          href={office.phoneHref}
+                          className="text-bone transition-colors hover:text-accent"
+                        >
+                          {office.phone}
+                        </a>
+                        <span className="ml-3 text-sm text-bone/35">
+                          {site.contact.hours}
+                        </span>
+                      </>
                     ) : (
-                      <span className="text-bone/45">Direct line coming soon</span>
+                      <span className="text-bone/45 text-sm">{office.type}</span>
                     )}
-                    <span className="ml-3 text-sm text-bone/35">
-                      {site.contact.hours}
-                    </span>
                   </ContactItem>
                 ))}
                 <ContactItem label="After hours">

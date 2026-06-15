@@ -15,15 +15,15 @@ export function Footer() {
               <a href="#top" className="inline-flex items-center" aria-label="Core Productions — home">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/logo-full.svg"
+                  src="/logo-original.svg"
                   alt="Core Productions"
                   className="h-20 w-auto"
                 />
               </a>
               <p className="mt-5 max-w-sm text-bone/40 text-sm leading-relaxed">
                 {site.tagline} Audio visual, lighting, sound and video
-                production. {site.contact.coverageShort} — offices in
-                Cape Town &amp; Johannesburg.
+                production. {site.contact.coverageShort}. Cape Town office
+                &amp; warehouse · Johannesburg warehouse.
               </p>
             </div>
 
