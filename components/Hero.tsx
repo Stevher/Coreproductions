@@ -60,7 +60,7 @@ export function Hero() {
           ))}
         </h1>
 
-        {/* Subline — process promise, gold */}
+        {/* Subline — process promise, brand orange */}
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -98,13 +98,13 @@ export function Hero() {
         >
           <a
             href="#contact"
-            className="bg-accent px-8 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-ink-950 transition-all duration-300 hover:bg-accent-light"
+            className="rounded-full bg-accent px-8 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-ink-950 transition-all duration-300 hover:bg-accent-light hover:shadow-[0_0_28px_rgba(245,130,32,0.4)]"
           >
             {hero.ctaPrimary}
           </a>
           <a
             href="#services"
-            className="group flex items-center gap-3 border border-white/15 px-7 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-bone/55 transition-all duration-300 hover:border-white/30 hover:text-bone"
+            className="group flex items-center gap-3 rounded-full border border-white/15 px-7 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-bone/55 transition-all duration-300 hover:border-white/30 hover:text-bone"
           >
             {hero.ctaSecondary}
             <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>

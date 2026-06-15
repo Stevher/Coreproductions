@@ -32,12 +32,9 @@ export function Nav() {
           href="#top"
           className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.22em] text-bone"
         >
-          {/* Gold rule mark — static, no ping */}
-          <span
-            className="block h-3 w-px"
-            style={{ background: "#C9A86C" }}
-          />
-          Core<span style={{ color: "#C9A86C" }}>Productions</span>
+          {/* Brand rule mark — static, no ping */}
+          <span className="block h-3 w-px bg-accent" />
+          Core<span className="text-accent">Productions</span>
         </a>
 
         {/* Desktop nav */}
@@ -54,7 +51,7 @@ export function Nav() {
           ))}
           <a
             href="#contact"
-            className="border border-accent/50 px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-accent transition-all duration-300 hover:bg-accent hover:text-ink-950"
+            className="rounded-full border border-accent/50 px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-accent transition-all duration-300 hover:bg-accent hover:text-ink-950"
           >
             Start a project
           </a>
@@ -98,7 +95,7 @@ export function Nav() {
               <a
                 href="#contact"
                 onClick={() => setOpen(false)}
-                className="mt-4 border border-accent/50 px-5 py-3.5 text-center text-xs font-semibold uppercase tracking-[0.18em] text-accent"
+                className="mt-4 rounded-full border border-accent/50 px-5 py-3.5 text-center text-xs font-semibold uppercase tracking-[0.18em] text-accent"
               >
                 Start a project
               </a>

@@ -110,7 +110,7 @@ export function Contact() {
 
               <button
                 type="submit"
-                className="mt-8 w-full bg-accent px-8 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-ink-950 transition-all duration-300 hover:bg-accent-light"
+                className="mt-8 w-full rounded-full bg-accent px-8 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-ink-950 transition-all duration-300 hover:bg-accent-light"
               >
                 {sent ? "Opening your email client…" : cta.button}
               </button>

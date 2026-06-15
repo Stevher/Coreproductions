@@ -18,14 +18,14 @@ body {
 }
 
 ::selection {
-  background: #C9A86C;
+  background: #f58220;
   color: #060608;
 }
 
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: #0c0c10; }
 ::-webkit-scrollbar-thumb { background: #22222c; border-radius: 99px; }
-::-webkit-scrollbar-thumb:hover { background: #C9A86C; }
+::-webkit-scrollbar-thumb:hover { background: #f58220; }
 
 /* Extremely subtle grain — just enough texture, not enough to read as "indie" */
 .grain::before {

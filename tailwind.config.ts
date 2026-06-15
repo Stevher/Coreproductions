@@ -15,12 +15,12 @@ const config: Config = {
           800: "#18181f",
           700: "#22222c",
         },
-        // Champagne gold — prestige, premium, timeless
+        // Core Productions brand orange
         accent: {
-          DEFAULT: "#C9A86C",
-          light: "#DEC08A",
-          dark: "#A08450",
-          muted: "#8B7248",
+          DEFAULT: "#f58220",
+          light: "#ff9c4d",
+          dark: "#d96d10",
+          muted: "#c2701f",
         },
         bone: "#EDE9E0",
       },

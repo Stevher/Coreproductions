@@ -8,12 +8,12 @@ const CYCLE_MS = 18000;
 type Clip = { start: number; end: number; label: string };
 type Track = { id: string; label: string; color: string; clips: Clip[] };
 
-// Monochrome gold/silver palette — restrained, corporate
+// Brand orange + muted silver/steel palette — restrained, corporate
 const tracks: Track[] = [
   {
     id: "cam",
     label: "CAM",
-    color: "#C9A86C", // gold — primary accent
+    color: "#f58220", // brand orange — primary accent
     clips: [
       { start: 0, end: 18, label: "WIDE SHOT" },
       { start: 20, end: 37, label: "CLOSE-UP" },
@@ -144,14 +144,14 @@ export function ProductionTimeline() {
           <div className="flex items-center gap-4">
             <span
               className="font-mono text-[11px] tabular-nums"
-              style={{ color: "#C9A86C", textShadow: "0 0 12px rgba(201,168,108,0.4)" }}
+              style={{ color: "#f58220", textShadow: "0 0 12px rgba(245,130,32,0.4)" }}
             >
               {toTimecode(progress)}
             </span>
             <span className="flex items-center gap-1.5 font-mono text-[9px] font-semibold uppercase tracking-widest text-accent/70">
               <span
                 className="h-1.5 w-1.5 rounded-full bg-accent"
-                style={{ boxShadow: "0 0 6px rgba(201,168,108,0.7)" }}
+                style={{ boxShadow: "0 0 6px rgba(245,130,32,0.7)" }}
               />
               REC
             </span>
@@ -249,17 +249,17 @@ export function ProductionTimeline() {
                   width: 0, height: 0,
                   borderLeft: "5px solid transparent",
                   borderRight: "5px solid transparent",
-                  borderTop: "7px solid #C9A86C",
+                  borderTop: "7px solid #f58220",
                   marginLeft: -5,
-                  filter: "drop-shadow(0 0 4px rgba(201,168,108,0.7))",
+                  filter: "drop-shadow(0 0 4px rgba(245,130,32,0.7))",
                 }}
               />
               <div
                 className="absolute top-0 h-full"
                 style={{
                   left: -1, width: 2,
-                  background: "linear-gradient(to bottom, #C9A86C, rgba(201,168,108,0.3))",
-                  boxShadow: "0 0 10px rgba(201,168,108,0.4)",
+                  background: "linear-gradient(to bottom, #f58220, rgba(245,130,32,0.3))",
+                  boxShadow: "0 0 10px rgba(245,130,32,0.4)",
                 }}
               />
             </div>
