@@ -1,12 +1,6 @@
-// Single source of truth for all site copy.
-// Rewritten and expanded from the original Core Productions site, with the new
-// video / storyboarding / editing services added. No team members listed.
-
 export const site = {
   name: "Core Productions",
-  tagline: "Built around your story.",
-  // Contact details reconstructed from the existing site. Update the email
-  // placeholder below with the real inbox before launch.
+  tagline: "Two disciplines. One standard.",
   contact: {
     email: "bernard@coreproductions.co.za",
     phoneOffice: "021 551 6690",
@@ -19,31 +13,56 @@ export const site = {
   bbbee: "QSE B-BBEE Level 2 Contributor",
 } as const;
 
-export const heroWords = ["Audio Visual", "Lighting", "Sound", "Video"];
+export const heroWords = [
+  "Audio Visual",
+  "Lighting",
+  "Sound Engineering",
+  "Set Design",
+  "Videography",
+  "Video Production",
+  "Storyboarding",
+  "Post-Production",
+];
 
 export const hero = {
-  eyebrow: "Audio Visual · Lighting · Sound · Video",
-  title: "We turn ideas into moments people remember.",
+  eyebrow: "Cape Town · South Africa",
+  title: "Live events. Brand films. No compromise.",
   body:
-    "Core Productions is a South African production company built for brands that refuse to be forgettable. From a single keynote to a national roadshow — and now from first storyboard to final cut — we design the technical and creative backbone behind your most important moments.",
+    "Core Productions is a full-spectrum production company serving South Africa's leading corporates. We design and operate world-class live events, and we produce brand and corporate films from concept to final delivery. Two disciplines. One team. The same standard throughout.",
   ctaPrimary: "Start a project",
-  ctaSecondary: "See what we do",
+  ctaSecondary: "Explore our services",
 };
 
 export const about = {
   eyebrow: "Who we are",
   title:
-    "A leading-edge audio visual and production house for brands that play to win.",
+    "South Africa's full-spectrum production partner — live events and video, under one roof.",
   paragraphs: [
-    "For years Core Productions has delivered bespoke, tailored solutions for corporate and blue-chip clients across every corner of live production — audio visual installations, professional sound systems, intelligent lighting, IT and set design.",
-    "Our solution-based approach powers product launches, year-end functions, roadshows, live concerts and international congresses and conferences. We obsess over the details most people never notice, because that is exactly what separates a good event from an unforgettable one.",
-    "Today we bring that same craft to the screen. Our video division captures, shapes and finishes the films your brand deserves — so the story doesn't end when the lights come up. One team, one standard, end to end.",
+    "Core Productions was built on a simple conviction: that technical excellence and creative integrity should never be in tension. We deliver bespoke solutions for corporate and blue-chip clients across the full scope of live production — audio visual systems, professional sound, intelligent lighting, IT infrastructure and custom set design.",
+    "Our portfolio spans product launches, annual general meetings, roadshows, live concerts, national conferences and international congresses. We are the crew that walks in calm when everyone else is under pressure, because we have solved the problem before.",
+    "Our video division extends that same discipline to the screen. From the first storyboard to the final colour grade, we produce brand films, corporate video, testimonial content and event highlights to broadcast standard — so your story has lasting impact long after the event ends.",
   ],
-  stats: [
-    { value: "Level 2", label: "QSE B-BBEE contributor" },
-    { value: "Blue-chip", label: "Corporate clients trusted us" },
-    { value: "End-to-end", label: "Concept to final delivery" },
-    { value: "1 team", label: "Live & video under one roof" },
+  credentials: [
+    {
+      label: "B-BBEE Status",
+      value: "Level 2",
+      sub: "QSE contributor",
+    },
+    {
+      label: "Client base",
+      value: "Corporate",
+      sub: "Blue-chip & enterprise",
+    },
+    {
+      label: "Capability",
+      value: "Full-service",
+      sub: "Live events & video film",
+    },
+    {
+      label: "Coverage",
+      value: "National",
+      sub: "Cape Town + on-location",
+    },
   ],
 };
 
@@ -53,163 +72,183 @@ export type Service = {
   title: string;
   summary: string;
   points: string[];
-  tag: "Live Production" | "Video";
 };
 
-export const services: Service[] = [
+export type ServiceCategory = {
+  id: string;
+  index: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  services: Service[];
+};
+
+export const serviceCategories: ServiceCategory[] = [
   {
-    id: "audio-visual",
-    number: "01",
-    title: "Audio Visual",
-    tag: "Live Production",
-    summary:
-      "Complete AV design and installation that disappears into the experience — screens, projection, switching and stage technology engineered to perform flawlessly under pressure.",
-    points: [
-      "LED walls, projection & screen design",
-      "Vision mixing, switching & playback",
-      "Conference & congress AV systems",
-      "Permanent & temporary installations",
+    id: "live-events",
+    index: "01",
+    title: "Live Event Production",
+    subtitle: "Conferences · Launches · Concerts · Roadshows",
+    description:
+      "End-to-end technical production for events that cannot afford to fail. We design, supply, install and operate every technical element — so your team can focus on the moment, not the machinery behind it.",
+    services: [
+      {
+        id: "audio-visual",
+        number: "01",
+        title: "Audio Visual",
+        summary:
+          "Complete AV design and delivery that integrates seamlessly into the experience. Screens, projection, vision mixing and stage technology engineered to perform under pressure, on schedule and on brief.",
+        points: [
+          "LED walls, projection mapping & display design",
+          "Vision mixing, video switching & content playback",
+          "Conference, congress & AGM AV systems",
+          "Temporary and permanent AV installations",
+        ],
+      },
+      {
+        id: "lighting",
+        number: "02",
+        title: "Lighting Design",
+        summary:
+          "Intelligent lighting that shapes atmosphere, directs attention and elevates every moment — from the opening address of a boardroom summit to the headline set of a live concert.",
+        points: [
+          "Full lighting concept and technical design",
+          "Intelligent fixtures, moving heads & LED systems",
+          "Stage, set and architectural lighting",
+          "Show programming and live operation",
+        ],
+      },
+      {
+        id: "sound",
+        number: "03",
+        title: "Sound Engineering",
+        summary:
+          "Professional sound systems designed for clarity in any venue. Every word of the keynote and every note of the performance arrives exactly as intended — intelligible, balanced and powerful.",
+        points: [
+          "Line-array, point-source & distributed PA design",
+          "Live mixing, system calibration & acoustic tuning",
+          "Wireless microphone & in-ear monitor systems",
+          "Multi-language conference audio and interpretation",
+        ],
+      },
+      {
+        id: "set-design",
+        number: "04",
+        title: "Set & Stage Design",
+        summary:
+          "Bespoke staging, scenic elements and event IT infrastructure that give your production a signature look and the structural confidence to execute without compromise.",
+        points: [
+          "Custom stage builds and scenic construction",
+          "Set design and corporate branding integration",
+          "Event IT, networking and data infrastructure",
+          "Modular, touring and roadshow solutions",
+        ],
+      },
     ],
   },
   {
-    id: "lighting",
-    number: "02",
-    title: "Lighting",
-    tag: "Live Production",
-    summary:
-      "Intelligent lighting design that sets the tone, directs the eye and turns a room into an atmosphere. From subtle corporate elegance to full concert spectacle.",
-    points: [
-      "Concept & lighting design",
-      "Intelligent & moving-head rigs",
-      "Stage, set & architectural lighting",
-      "Programming & live operation",
-    ],
-  },
-  {
-    id: "sound",
-    number: "03",
-    title: "Sound",
-    tag: "Live Production",
-    summary:
-      "Professional sound systems tuned for clarity in any space — so every word of the keynote and every beat of the show lands exactly as intended.",
-    points: [
-      "Line-array & distributed PA design",
-      "Live mixing & system tuning",
-      "Wireless mics & in-ear monitoring",
-      "Conference & multi-language audio",
-    ],
-  },
-  {
-    id: "set-design",
-    number: "04",
-    title: "Set & Stage Design",
-    tag: "Live Production",
-    summary:
-      "Bespoke staging, scenic and IT infrastructure that gives your event a signature look and the technical backbone to run without a hitch.",
-    points: [
-      "Custom stage & scenic builds",
-      "Set design & branding integration",
-      "Event IT & networking",
-      "Roadshow & touring solutions",
-    ],
-  },
-  {
-    id: "videography",
-    number: "05",
-    title: "Videography",
-    tag: "Video",
-    summary:
-      "Cinematic capture for live events, brands and people. Multi-camera coverage and crafted single-camera shoots that look as considered as they feel.",
-    points: [
-      "Multi-camera event coverage",
-      "Brand, corporate & promotional shoots",
-      "Interviews & testimonial filming",
-      "Aerial / drone & live-stream capture",
-    ],
-  },
-  {
-    id: "video-production",
-    number: "06",
-    title: "Video Production",
-    tag: "Video",
-    summary:
-      "Full-service production managed end to end. We handle the concept, crew, logistics and direction so you get a finished film, not a list of problems.",
-    points: [
-      "Creative concept & treatment",
-      "Pre-production & scheduling",
-      "Direction, crew & on-set management",
-      "Brand films, commercials & event recaps",
-    ],
-  },
-  {
-    id: "storyboarding",
-    number: "07",
-    title: "Storyboarding",
-    tag: "Video",
-    summary:
-      "Every great film is solved on paper first. We map the narrative, shots and pacing before a single camera rolls — so the vision is locked and the budget is respected.",
-    points: [
-      "Scripting & narrative structure",
-      "Shot lists & visual storyboards",
-      "Animatics & pre-visualisation",
-      "Creative direction & moodboards",
-    ],
-  },
-  {
-    id: "editing",
-    number: "08",
-    title: "Editing & Post",
-    tag: "Video",
-    summary:
-      "Where the story comes together. Editing, colour, sound and motion graphics finished to broadcast standard and delivered in every format you need.",
-    points: [
-      "Editing & story assembly",
-      "Colour grading & sound mix",
-      "Motion graphics & titles",
-      "Multi-format & social delivery",
+    id: "video-film",
+    index: "02",
+    title: "Video & Film Production",
+    subtitle: "Brand Films · Corporate Video · Documentaries · Event Content",
+    description:
+      "Full-service video and film production managed from first concept to final delivery. We bring the creative direction, the crew, the technical rigour and the post-production discipline to produce content that represents your brand at its best.",
+    services: [
+      {
+        id: "videography",
+        number: "01",
+        title: "Videography",
+        summary:
+          "Cinematic, purposeful camera work for live events, brands and people. Whether it is a single-camera interview or a multi-camera live event, every shot is composed with intent.",
+        points: [
+          "Multi-camera live event coverage and capture",
+          "Brand, corporate and promotional shoots",
+          "Executive interviews and testimonial filming",
+          "Aerial and drone cinematography",
+        ],
+      },
+      {
+        id: "video-production",
+        number: "02",
+        title: "Video Production",
+        summary:
+          "Full-service production from brief to broadcast. We manage creative development, logistics, crew and direction so you receive a finished asset — not a project to manage.",
+        points: [
+          "Creative brief, concept development and treatment",
+          "Pre-production planning and production scheduling",
+          "Direction, crew management and on-set supervision",
+          "Brand films, commercials, case studies and event recaps",
+        ],
+      },
+      {
+        id: "storyboarding",
+        number: "03",
+        title: "Storyboarding & Pre-Production",
+        summary:
+          "A production is only as good as its preparation. We resolve the narrative, the shot design and the pacing before a camera rolls — protecting your vision and your budget simultaneously.",
+        points: [
+          "Script development and narrative structure",
+          "Shot lists, storyboards and scene breakdowns",
+          "Animatics and visual pre-visualisation",
+          "Creative direction, moodboards and style references",
+        ],
+      },
+      {
+        id: "editing",
+        number: "04",
+        title: "Editing & Post-Production",
+        summary:
+          "Where footage becomes a film. We assemble, grade, mix and finish to broadcast standard — then deliver in every format required, from cinema to social.",
+        points: [
+          "Offline and online editing and story assembly",
+          "Professional colour grading and digital intermediate",
+          "Sound design, dialogue editing and music mix",
+          "Motion graphics, titles and animated elements",
+        ],
+      },
     ],
   },
 ];
 
 export const process = {
   eyebrow: "How we work",
-  title: "From a blank page to a finished moment.",
+  title: "Rigorous process. Reliable results.",
   body:
-    "Whether it's a live event or a brand film, the path is the same: understand the story, plan it obsessively, execute it precisely, and finish it properly.",
+    "Whether we are producing a flagship conference or a brand film, the approach is the same: define the objective clearly, plan every detail precisely, execute without shortcuts and deliver a finished product that needs no explanation.",
   steps: [
     {
       number: "01",
-      title: "Discover",
+      title: "Brief & Discovery",
       body:
-        "We start with your objective, your audience and your story — not a kit list. Everything that follows is built to serve that.",
+        "We start with your objective, your audience and your brand — not a specification sheet. Understanding the why behind a project is what allows us to make the right technical and creative decisions throughout.",
     },
     {
       number: "02",
-      title: "Design & Storyboard",
+      title: "Design & Pre-Production",
       body:
-        "We plan the experience in detail: technical design for live, storyboards and treatments for video. You approve the vision before we build it.",
+        "Every element is designed and approved before production begins. Technical drawings and AV schematics for live events; scripts, storyboards and shot lists for video. You sign off on the vision before we commit to it.",
     },
     {
       number: "03",
-      title: "Produce",
+      title: "Production & Execution",
       body:
-        "Our crew delivers on the day with the calm of people who have done it a thousand times. Live or on camera, the standard never drops.",
+        "Our crew is on site and on time. Live or on camera, we operate with the composure and precision of a team that has delivered under pressure many times before. No surprises. No shortcuts.",
     },
     {
       number: "04",
-      title: "Finish & Deliver",
+      title: "Delivery & Handover",
       body:
-        "We strike the show or cut the edit, then hand over polished, ready-to-use deliverables — and we're already thinking about the next one.",
+        "We close out the production properly — strike, archive and hand over every deliverable in the agreed format. Your finished event or film is ready to use, and we are ready to debrief and plan the next one.",
     },
   ],
 };
 
 export const cta = {
-  eyebrow: "Let's make something",
-  title: "Got a moment worth getting right?",
+  eyebrow: "Work with us",
+  title: "Tell us what you need to produce.",
   body:
-    "Tell us what you're planning — a launch, a conference, a roadshow, a brand film, or all of the above. We'll bring the technical craft and the creative eye to match.",
-  button: "Start a project",
+    "Whether you are planning a national conference, a product launch, a brand film or an ongoing video content programme — contact us and we will respond with a clear proposal and a realistic timeline.",
+  button: "Send an enquiry",
 };
 
 export const nav = [

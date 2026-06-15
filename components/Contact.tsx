@@ -107,7 +107,7 @@ export function Contact() {
                     rows={4}
                     required
                     className="w-full resize-none rounded-xl border border-white/10 bg-ink-950/60 px-4 py-3 text-bone outline-none transition-colors placeholder:text-bone/30 focus:border-accent/50"
-                    placeholder="A launch, a conference, a brand film…"
+                    placeholder="A conference, a product launch, a brand film, or all three…"
                   />
                 </div>
               </div>
