@@ -7,14 +7,14 @@ export function About() {
   return (
     <section
       id="about"
-      className="relative border-t border-white/[0.06] px-6 py-32 lg:px-10 lg:py-44"
+      className="relative border-t border-white/[0.06] px-6 py-20 lg:px-10 lg:py-28"
     >
       <div className="pointer-events-none absolute left-0 top-1/2 -z-10 h-[50vh] w-[35vw] -translate-y-1/2 rounded-full bg-accent/6 blur-[200px]" />
 
       <div className="mx-auto max-w-7xl">
         <Reveal>
-          <p className="mb-6 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.38em] text-accent/80">
-            <span className="h-px w-10 bg-accent/50" />
+          <p className="mb-6 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.38em] text-accent-tint">
+            <span className="h-px w-10 bg-accent-tint/60" />
             {about.eyebrow}
           </p>
         </Reveal>
@@ -23,7 +23,7 @@ export function About() {
           <RevealText text={about.title} />
         </h2>
 
-        <div className="mt-20 grid gap-16 lg:grid-cols-[1.6fr_1fr] lg:gap-28">
+        <div className="mt-12 grid gap-12 lg:grid-cols-[1.6fr_1fr] lg:gap-20">
           {/* Copy */}
           <div className="space-y-8">
             {about.paragraphs.map((p, i) => (
@@ -45,7 +45,7 @@ export function About() {
                     {c.label}
                   </span>
                   <div>
-                    <div className="font-display text-3xl text-bone">{c.value}</div>
+                    <div className="font-display text-3xl text-accent-tint">{c.value}</div>
                     <div className="mt-1.5 text-sm text-bone/40">{c.sub}</div>
                   </div>
                 </div>

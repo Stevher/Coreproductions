@@ -21,6 +21,8 @@ const config: Config = {
           light: "#ff9c4d",
           dark: "#d96d10",
           muted: "#c2701f",
+          // Soft, desaturated tint — secondary/decorative accents
+          tint: "#D9A878",
         },
         bone: "#EDE9E0",
       },

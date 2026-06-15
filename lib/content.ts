@@ -3,12 +3,24 @@ export const site = {
   tagline: "Two disciplines. One standard.",
   contact: {
     email: "bernard@coreproductions.co.za",
-    phoneOffice: "021 551 6690",
-    phoneOfficeHref: "tel:+27215516690",
     phoneAfterHours: "083 737 5131",
     phoneAfterHoursHref: "tel:+27837375131",
     hours: "Mon–Fri · 08:00–17:00",
-    location: "Cape Town, South Africa",
+    coverage: "Operating nationwide across South Africa",
+    coverageShort: "Nationwide, South Africa",
+    offices: [
+      {
+        city: "Cape Town",
+        phone: "021 551 6690",
+        phoneHref: "tel:+27215516690",
+      },
+      {
+        // Johannesburg number to be confirmed by the client.
+        city: "Johannesburg",
+        phone: "",
+        phoneHref: "",
+      },
+    ],
   },
   bbbee: "QSE B-BBEE Level 2 Contributor",
 } as const;
@@ -25,7 +37,7 @@ export const heroWords = [
 ];
 
 export const hero = {
-  eyebrow: "Cape Town · South Africa",
+  eyebrow: "Operating nationwide · South Africa",
   title: "South Africa's full-spectrum production partner.",
   subline: "Every cue, every cut. Delivered to the same standard.",
   body:
@@ -61,8 +73,8 @@ export const about = {
     },
     {
       label: "Coverage",
-      value: "National",
-      sub: "Cape Town + on-location",
+      value: "Nationwide",
+      sub: "Cape Town & Johannesburg",
     },
   ],
 };

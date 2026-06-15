@@ -39,10 +39,10 @@ function ServiceRow({ service }: { service: Service }) {
 
       <button
         onClick={() => setOpen((v) => !v)}
-        className="flex w-full items-start gap-5 py-6 text-left"
+        className="flex w-full items-start gap-5 py-5 text-left"
       >
         {/* Serif italic number */}
-        <span className="num-serif mt-0.5 w-6 shrink-0 text-sm text-accent/50">
+        <span className="num-serif mt-0.5 w-6 shrink-0 text-sm text-accent-tint">
           {service.number}
         </span>
 
@@ -69,7 +69,7 @@ function ServiceRow({ service }: { service: Service }) {
                       key={point}
                       className="flex items-start gap-3 text-sm text-bone/40"
                     >
-                      <span className="mt-2 h-px w-4 shrink-0 bg-accent/50" />
+                      <span className="mt-2 h-px w-4 shrink-0 bg-accent-tint/70" />
                       {point}
                     </li>
                   ))}
@@ -99,16 +99,16 @@ function CategoryBlock({
   return (
     <Reveal delay={delay} className="flex flex-col">
       {/* Category header */}
-      <div className={`mb-8 border-t-2 pt-8 ${primary ? "border-accent" : "border-white/15"}`}>
+      <div className={`mb-6 border-t-2 pt-6 ${primary ? "border-accent" : "border-accent-tint/40"}`}>
         <div className="mb-4 flex items-center gap-3">
-          <span className="num-serif text-lg text-accent/60">{category.index}</span>
+          <span className="num-serif text-lg text-accent-tint">{category.index}</span>
           <span className="h-px flex-1 bg-white/[0.07]" />
         </div>
         <h3 className="display-lg text-bone">{category.title}</h3>
         <p className="mt-2 text-[11px] font-medium uppercase tracking-[0.28em] text-bone/35">
           {category.subtitle}
         </p>
-        <p className="mt-5 text-sm leading-relaxed text-bone/50">
+        <p className="mt-4 text-sm leading-relaxed text-bone/50">
           {category.description}
         </p>
       </div>
@@ -125,16 +125,16 @@ function CategoryBlock({
 
 export function Services() {
   return (
-    <section id="services" className="relative px-6 py-32 lg:px-10 lg:py-44">
+    <section id="services" className="relative px-6 py-20 lg:px-10 lg:py-28">
       <div className="pointer-events-none absolute right-0 top-1/3 -z-10 h-[60vh] w-[35vw] rounded-full bg-accent/5 blur-[180px]" />
 
       <div className="mx-auto max-w-7xl">
         {/* Section header */}
-        <div className="mb-20 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+        <div className="mb-12 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <Reveal>
-              <p className="mb-6 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.38em] text-accent/80">
-                <span className="h-px w-10 bg-accent/50" />
+              <p className="mb-6 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.38em] text-accent-tint">
+                <span className="h-px w-10 bg-accent-tint/60" />
                 What we do
               </p>
             </Reveal>
@@ -151,7 +151,7 @@ export function Services() {
         </div>
 
         {/* Two-pillar grid */}
-        <div className="grid gap-16 lg:grid-cols-2 lg:gap-20">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-14">
           {serviceCategories.map((cat, i) => (
             <CategoryBlock
               key={cat.id}

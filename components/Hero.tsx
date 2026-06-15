@@ -18,7 +18,7 @@ export function Hero() {
     <section
       ref={ref}
       id="top"
-      className="relative overflow-hidden px-6 pb-0 pt-36 lg:px-10"
+      className="relative overflow-hidden px-6 pb-0 pt-32 lg:px-10"
     >
       {/* Subtle ambient glow — pulled back vs before */}
       <div className="pointer-events-none absolute inset-0 -z-10">
@@ -34,9 +34,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="mb-10 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.4em] text-bone/35"
+          className="mb-8 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.4em] text-bone/35"
         >
-          <span className="h-px w-12 bg-accent/50" />
+          <span className="h-px w-12 bg-accent-tint/60" />
           {hero.eyebrow}
         </motion.p>
 
@@ -76,7 +76,7 @@ export function Hero() {
           animate={{ opacity: 1, scaleX: 1 }}
           transition={{ duration: 0.9, delay: 0.95, ease: [0.16, 1, 0.3, 1] }}
           style={{ originX: 0 }}
-          className="mt-8 h-px w-full max-w-xl bg-gradient-to-r from-accent/30 via-bone/10 to-transparent"
+          className="mt-6 h-px w-full max-w-xl bg-gradient-to-r from-accent/30 via-bone/10 to-transparent"
         />
 
         {/* Body */}
@@ -84,7 +84,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
-          className="mt-8 max-w-lg text-lg leading-relaxed text-bone/50"
+          className="mt-6 max-w-lg text-lg leading-relaxed text-bone/50"
         >
           {hero.body}
         </motion.p>
@@ -94,7 +94,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.1 }}
-          className="mt-10 flex flex-wrap items-center gap-4"
+          className="mt-8 flex flex-wrap items-center gap-4"
         >
           <a
             href="#contact"
@@ -116,7 +116,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.25 }}
-          className="mt-14 flex flex-wrap items-center gap-x-10 gap-y-3 border-t border-white/[0.06] pt-8"
+          className="mt-10 flex flex-wrap items-center gap-x-10 gap-y-3 border-t border-white/[0.06] pt-6"
         >
           {[
             { label: "Live Event Production", num: "01" },
@@ -126,7 +126,7 @@ export function Hero() {
               key={label}
               className="flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-bone/30"
             >
-              <span className="num-serif text-sm text-accent/60">{num}</span>
+              <span className="num-serif text-sm text-accent-tint">{num}</span>
               {label}
             </span>
           ))}
@@ -134,7 +134,7 @@ export function Hero() {
       </motion.div>
 
       {/* ── Hero stage — production timeline ───────────── */}
-      <div className="mx-auto mt-20 w-full max-w-7xl">
+      <div className="mx-auto mt-12 w-full max-w-7xl">
         <ProductionTimeline />
       </div>
 

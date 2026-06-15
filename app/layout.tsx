@@ -36,6 +36,7 @@ export const metadata: Metadata = {
     "corporate video",
     "South Africa",
     "Cape Town",
+    "Johannesburg",
   ],
   openGraph: {
     title: "Core Productions — South Africa's full-spectrum production partner",

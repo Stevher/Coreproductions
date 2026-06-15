@@ -22,7 +22,8 @@ export function Footer() {
               </a>
               <p className="mt-5 max-w-sm text-bone/40 text-sm leading-relaxed">
                 {site.tagline} Audio visual, lighting, sound and video
-                production. {site.contact.location}.
+                production. {site.contact.coverageShort} — offices in
+                Cape Town &amp; Johannesburg.
               </p>
             </div>
 

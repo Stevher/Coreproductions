@@ -7,16 +7,16 @@ export function Process() {
   return (
     <section
       id="process"
-      className="relative border-y border-white/[0.06] bg-ink-900/30 px-6 py-32 lg:px-10 lg:py-44"
+      className="relative border-y border-white/[0.06] bg-ink-900/30 px-6 py-20 lg:px-10 lg:py-28"
     >
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-16 lg:grid-cols-[1fr_1.3fr] lg:gap-24">
+        <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:gap-20">
 
           {/* Left — sticky heading */}
-          <div className="lg:sticky lg:top-32 lg:self-start">
+          <div className="lg:sticky lg:top-28 lg:self-start">
             <Reveal>
-              <p className="mb-6 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.38em] text-accent/80">
-                <span className="h-px w-10 bg-accent/50" />
+              <p className="mb-6 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.38em] text-accent-tint">
+                <span className="h-px w-10 bg-accent-tint/60" />
                 {process.eyebrow}
               </p>
             </Reveal>
@@ -33,14 +33,14 @@ export function Process() {
           {/* Right — steps */}
           <div className="relative">
             {/* Vertical connector line */}
-            <div className="absolute left-[34px] top-0 hidden h-full w-px bg-white/[0.06] lg:block" />
+            <div className="absolute left-[38px] top-0 hidden h-full w-px bg-white/[0.06] lg:block" />
 
             <div className="space-y-3">
               {process.steps.map((step, i) => (
                 <Reveal key={step.number} delay={i * 0.08}>
-                  <div className="group relative flex gap-8 border border-white/[0.07] bg-ink-950/60 p-8 transition-all duration-500 hover:border-accent/25 hover:bg-ink-900/60">
+                  <div className="group relative flex gap-7 border border-white/[0.07] bg-ink-950/60 p-6 transition-all duration-500 hover:border-accent/25 hover:bg-ink-900/60 md:p-7">
                     {/* Step number — serif italic, large */}
-                    <span className="num-serif mt-0.5 shrink-0 text-3xl leading-none text-accent/40 transition-colors duration-300 group-hover:text-accent/70">
+                    <span className="num-serif mt-0.5 shrink-0 text-3xl leading-none text-accent-tint/60 transition-colors duration-300 group-hover:text-accent">
                       {step.number}
                     </span>
                     <div>

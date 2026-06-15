@@ -25,13 +25,13 @@ export function Contact() {
       <div className="pointer-events-none absolute left-1/2 top-0 -z-10 h-[40vh] w-[60vw] -translate-x-1/2 rounded-full bg-accent/6 blur-[200px]" />
 
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
 
           {/* Left — copy + contact details */}
           <div>
             <Reveal>
-              <p className="mb-6 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.38em] text-accent/80">
-                <span className="h-px w-10 bg-accent/50" />
+              <p className="mb-6 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.38em] text-accent-tint">
+                <span className="h-px w-10 bg-accent-tint/60" />
                 {cta.eyebrow}
               </p>
             </Reveal>
@@ -39,13 +39,13 @@ export function Contact() {
               <RevealText text={cta.title} />
             </h2>
             <Reveal delay={0.2}>
-              <p className="mt-8 max-w-md text-lg leading-relaxed text-bone/50">
+              <p className="mt-6 max-w-md text-lg leading-relaxed text-bone/50">
                 {cta.body}
               </p>
             </Reveal>
 
             <Reveal delay={0.3}>
-              <dl className="mt-14 space-y-0 divide-y divide-white/[0.06] border-t border-white/[0.06]">
+              <dl className="mt-10 space-y-0 divide-y divide-white/[0.06] border-t border-white/[0.06]">
                 <ContactItem label="Email">
                   <a
                     href={`mailto:${site.contact.email}`}
@@ -54,17 +54,23 @@ export function Contact() {
                     {site.contact.email}
                   </a>
                 </ContactItem>
-                <ContactItem label="Office">
-                  <a
-                    href={site.contact.phoneOfficeHref}
-                    className="text-bone transition-colors hover:text-accent"
-                  >
-                    {site.contact.phoneOffice}
-                  </a>
-                  <span className="ml-3 text-sm text-bone/35">
-                    {site.contact.hours}
-                  </span>
-                </ContactItem>
+                {site.contact.offices.map((office) => (
+                  <ContactItem key={office.city} label={office.city}>
+                    {office.phone ? (
+                      <a
+                        href={office.phoneHref}
+                        className="text-bone transition-colors hover:text-accent"
+                      >
+                        {office.phone}
+                      </a>
+                    ) : (
+                      <span className="text-bone/45">Direct line coming soon</span>
+                    )}
+                    <span className="ml-3 text-sm text-bone/35">
+                      {site.contact.hours}
+                    </span>
+                  </ContactItem>
+                ))}
                 <ContactItem label="After hours">
                   <a
                     href={site.contact.phoneAfterHoursHref}
@@ -73,8 +79,8 @@ export function Contact() {
                     {site.contact.phoneAfterHours}
                   </a>
                 </ContactItem>
-                <ContactItem label="Location">
-                  <span className="text-bone">{site.contact.location}</span>
+                <ContactItem label="Coverage">
+                  <span className="text-bone">{site.contact.coverage}</span>
                 </ContactItem>
               </dl>
             </Reveal>
@@ -84,7 +90,7 @@ export function Contact() {
           <Reveal delay={0.15}>
             <form
               onSubmit={handleSubmit}
-              className="border border-white/[0.08] bg-ink-900/40 p-8 md:p-10"
+              className="border border-white/[0.08] bg-ink-900/40 p-6 md:p-8"
             >
               <div className="space-y-6">
                 <Field name="name" label="Full name" type="text" required />
@@ -115,7 +121,7 @@ export function Contact() {
                 {sent ? "Opening your email client…" : cta.button}
               </button>
               <p className="mt-4 text-center text-xs text-bone/30">
-                Or call us on {site.contact.phoneOffice} · {site.contact.hours}
+                Or call our Cape Town office on {site.contact.offices[0].phone} · {site.contact.hours}
               </p>
             </form>
           </Reveal>
