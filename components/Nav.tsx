@@ -31,9 +31,9 @@ export function Nav() {
         <a href="#top" className="flex items-center" aria-label="Core Productions — home">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/logo-light.svg"
+            src="/logo-stripped.svg"
             alt="Core Productions"
-            className="h-7 w-auto transition-opacity duration-300 hover:opacity-80 md:h-8"
+            className="h-10 w-auto transition-opacity duration-300 hover:opacity-80 md:h-12"
           />
         </a>
 

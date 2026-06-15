@@ -15,9 +15,9 @@ export function Footer() {
               <a href="#top" className="inline-flex items-center" aria-label="Core Productions — home">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/logo-light.svg"
+                  src="/logo-stripped.svg"
                   alt="Core Productions"
-                  className="h-9 w-auto"
+                  className="h-14 w-auto"
                 />
               </a>
               <p className="mt-5 max-w-sm text-bone/40 text-sm leading-relaxed">
