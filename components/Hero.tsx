@@ -144,7 +144,7 @@ export function Hero() {
         >
           {[
             { label: "Live Event Production", num: "01" },
-            { label: "Video & Film Production", num: "02" },
+            { label: "Content Creation", num: "02" },
           ].map(({ label, num }) => (
             <span
               key={label}

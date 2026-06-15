@@ -31,28 +31,28 @@ export const heroWords = [
   "Lighting",
   "Sound Engineering",
   "Set Design",
-  "Videography",
   "Video Production",
-  "Storyboarding",
-  "Post-Production",
+  "Animation",
+  "Scene Design",
+  "Content Creation",
 ];
 
 export const hero = {
   eyebrow: "Operating nationwide · South Africa",
   title: "South Africa's full-spectrum production partner.",
   subline: "Every cue, every cut. Delivered to the same standard.",
-  body: "Core Productions designs and operates world-class live events, and produces brand and corporate films from concept to final delivery. Two disciplines. One team. One standard.",
+  body: "Core Productions designs and operates world-class live events, and creates everything from brand films and animation to scene design and digital content. Two disciplines. One team. One standard.",
   ctaPrimary: "Start a project",
   ctaSecondary: "Explore our services",
 };
 
 export const about = {
   eyebrow: "Who we are",
-  title: "Live events and video — under one roof.",
+  title: "Live events and content — under one roof.",
   paragraphs: [
     "Core Productions was built on a single conviction: that a production company should be the last thing a client worries about. We take full technical and operational responsibility for every production we run — audio visual, sound, lighting, set design, compliance documentation, crew management and logistics — so your team can focus on the event, not the machinery behind it.",
     "Our work spans annual general meetings, investor days and roadshows, industry congresses, product launches and national conferences across every key sector. We are the crew that walks in calm when everyone else is under pressure — because we have solved the problem before.",
-    "Our video division extends the same discipline to the screen. From the first storyboard to the final colour grade, we produce executive communications, investor-facing content, brand films and corporate video to broadcast standard. One briefing covers both the event and the content — no agency hand-off, no gap in the production chain.",
+    "Our content studio extends the same discipline to every screen. From the first storyboard to the final grade, we produce video, animation, scene design and the digital content that carries a brand between its big moments — all to broadcast standard. One briefing covers both the event and the content it generates: no agency hand-off, no gap in the production chain.",
   ],
   credentials: [
     {
@@ -68,7 +68,7 @@ export const about = {
     {
       label: "Capability",
       value: "Full-service",
-      sub: "Live events & video film",
+      sub: "Live events & content",
     },
     {
       label: "Coverage",
@@ -185,42 +185,68 @@ export const serviceCategories: ServiceCategory[] = [
     ],
   },
   {
-    id: "video-film",
+    id: "content-creation",
     index: "02",
-    title: "Video & Film Production",
-    subtitle: "Brand Films · Corporate Video · Executive Content · Event Capture",
+    title: "Content Creation",
+    subtitle: "Video · Animation · Scene Design · Brand Content",
     description:
-      "Full-service video and film production from first concept to final delivery. We bring the creative direction, the crew, the technical rigour and the post-production discipline to produce content that represents your brand at its best — and holds up on any screen.",
+      "A full creative studio under one roof. From video production and animation to scene design and the content systems that carry your brand across every channel — we develop, produce and finish content from first concept to final delivery.",
     services: [
       {
-        id: "videography",
+        id: "video-production",
         number: "01",
-        title: "Videography",
+        title: "Video Production",
         summary:
-          "Cinematic, purposeful camera work for live events, brands and people. Whether it is a single-camera executive interview or a twelve-camera live event, every shot is composed with intent.",
+          "Full-service video and film from brief to broadcast. We manage creative development, crew, direction and on-set logistics so you receive a finished asset — not a project to manage.",
         points: [
+          "Brand films, commercials, case studies and event recaps",
           "Multi-camera live event coverage and capture",
-          "Brand, corporate and promotional shoots",
           "Executive interviews and testimonial filming",
           "Aerial and drone cinematography",
         ],
       },
       {
-        id: "video-production",
+        id: "animation",
         number: "02",
-        title: "Video Production",
+        title: "Animation & Motion Graphics",
         summary:
-          "Full-service production from brief to broadcast. We manage creative development, logistics, crew and direction so you receive a finished asset — not a project to manage.",
+          "Where a camera can't go, animation can. We design 2D and 3D animation, motion graphics and explainer content that turns complex ideas — products, data, processes — into clear, branded visual stories.",
         points: [
-          "Creative brief, concept development and treatment",
-          "Pre-production planning and production scheduling",
-          "Direction, crew management and on-set supervision",
-          "Brand films, commercials, case studies and event recaps",
+          "2D and 3D animation and explainer content",
+          "Motion graphics, titles and lower-thirds",
+          "Data visualisation and process animation",
+          "Animated logos, idents and brand elements",
+        ],
+      },
+      {
+        id: "scene-design",
+        number: "03",
+        title: "Scene Design",
+        summary:
+          "The world your content lives in. We design and build physical and virtual scenes, sets and environments — from studio backdrops and product staging to LED-volume and green-screen virtual production.",
+        points: [
+          "Studio set and backdrop design and build",
+          "Virtual production and LED-volume environments",
+          "Green-screen and compositing environments",
+          "Product staging and scene styling",
+        ],
+      },
+      {
+        id: "content-design",
+        number: "04",
+        title: "Content Design & Creation",
+        summary:
+          "The content that keeps your brand present between the big moments. We design and produce social, digital and campaign content as a consistent system — built to scale across every platform.",
+        points: [
+          "Social, digital and campaign content systems",
+          "Graphic design, key visuals and brand templates",
+          "Executive, investor and corporate communications",
+          "Photography, stills and digital asset libraries",
         ],
       },
       {
         id: "storyboarding",
-        number: "03",
+        number: "05",
         title: "Storyboarding & Pre-Production",
         summary:
           "A production is only as good as its preparation. We resolve the narrative, the shot design and the pacing before a camera rolls — protecting your vision and your budget simultaneously.",
@@ -233,28 +259,15 @@ export const serviceCategories: ServiceCategory[] = [
       },
       {
         id: "editing",
-        number: "04",
+        number: "06",
         title: "Editing & Post-Production",
         summary:
-          "Where footage becomes a film. We assemble, grade, mix and finish to broadcast standard — then deliver in every format required, from boardroom to social.",
+          "Where footage becomes finished content. We assemble, grade, mix and finish to broadcast standard — then deliver in every format required, from boardroom to social.",
         points: [
           "Offline and online editing and story assembly",
           "Professional colour grading and digital intermediate",
           "Sound design, dialogue editing and music mix",
-          "Motion graphics, titles and animated elements",
-        ],
-      },
-      {
-        id: "executive-content",
-        number: "05",
-        title: "Executive & Corporate Content",
-        summary:
-          "Authoritative video for investor communications, CEO messaging and regulatory documentation. Produced to broadcast standard and delivered in formats suitable for board use, annual reports and external stakeholder channels.",
-        points: [
-          "CEO, CFO and executive interview production",
-          "Investor day and AGM highlight content",
-          "Annual report video and digital investor packs",
-          "Compliance-ready video documentation and archive",
+          "Multi-format delivery from cinema to social",
         ],
       },
     ],
@@ -296,7 +309,7 @@ export const assurance = {
 export const process = {
   eyebrow: "How we work",
   title: "Rigorous process. Reliable results.",
-  body: "Whether we are producing a flagship conference or a brand film, the approach is the same: define the objective clearly, plan every detail precisely, execute without shortcuts and deliver a finished product that needs no explanation.",
+  body: "Whether we are producing a flagship conference or a content campaign, the approach is the same: define the objective clearly, plan every detail precisely, execute without shortcuts and deliver a finished product that needs no explanation.",
   steps: [
     {
       number: "01",
@@ -306,7 +319,7 @@ export const process = {
     {
       number: "02",
       title: "Design & Pre-Production",
-      body: "Every element is designed and approved before production begins. Technical drawings, AV schematics and compliance plans for live events; scripts, storyboards and shot lists for video. You sign off on the vision before we commit to it.",
+      body: "Every element is designed and approved before production begins. Technical drawings, AV schematics and compliance plans for live events; scripts, storyboards and design frames for content. You sign off on the vision before we commit to it.",
     },
     {
       number: "03",
@@ -324,7 +337,7 @@ export const process = {
 export const cta = {
   eyebrow: "Work with us",
   title: "Tell us what you need to produce.",
-  body: "Whether you are planning a national conference, a product launch, a brand film or an ongoing video content programme — contact us and we will respond with a clear proposal and a realistic timeline.",
+  body: "Whether you are planning a national conference, a product launch, a brand film or an ongoing content programme — contact us and we will respond with a clear proposal and a realistic timeline.",
   button: "Send an enquiry",
 };
 
@@ -338,7 +351,7 @@ export const nav = [
 export const stats = [
   { value: "2014", label: "Founded", sub: "Over a decade in operation" },
   { value: "500+", label: "Live events", sub: "Nationally produced" },
-  { value: "200+", label: "Video productions", sub: "Brand to broadcast" },
+  { value: "200+", label: "Content productions", sub: "Brand to broadcast" },
   { value: "9", label: "Provinces", sub: "Full national coverage" },
 ];
 
@@ -372,16 +385,16 @@ export const faq = {
       a: "Yes. Core Productions operates nationwide across South Africa from an office and warehouse in Cape Town and a warehouse in Johannesburg. We produce events in every province, as well as at international venues. Our full crew and equipment travel with every production — you are not billed for sub-standard local alternatives.",
     },
     {
-      q: "Can you handle both the live event and the video production for the same project?",
-      a: "This is one of our core capabilities. Because both disciplines sit inside one team, your event capture, highlights reel and executive messaging can be planned and delivered as a single integrated brief — no agency hand-offs, no version control issues, no inconsistency in brand execution. We recommend briefing both requirements together for the best and most cost-effective outcome.",
+      q: "Can you handle both the live event and the content for the same project?",
+      a: "This is one of our core capabilities. Because both disciplines sit inside one team, your event capture, highlights, animation and executive messaging can be planned and delivered as a single integrated brief — no agency hand-offs, no version-control issues, no inconsistency in brand execution. We recommend briefing both requirements together for the best and most cost-effective outcome.",
     },
     {
       q: "What types of events do you specialise in?",
       a: "Our work spans national corporate conferences, AGMs, investor days and roadshows, industry congresses, product launches, awards ceremonies and live concerts. Whatever the format, every production is treated as if it cannot fail — because for our clients, it cannot.",
     },
     {
-      q: "What does a video production quote include?",
-      a: "A full production quote covers pre-production (scripting, storyboarding, location scouting, scheduling), production (crew, equipment, direction, on-set management) and post-production (editing, colour grading, sound mix, motion graphics and delivery in all required formats). We quote end-to-end — there are no surprises mid-production.",
+      q: "What does a content production quote include?",
+      a: "A full content quote covers pre-production (concept, scripting, storyboarding, scene design, scheduling), production (crew, equipment, direction, animation and on-set management) and post-production (editing, colour grading, sound mix, motion graphics and delivery in every required format). We quote end-to-end — there are no surprises mid-production.",
     },
   ],
 };

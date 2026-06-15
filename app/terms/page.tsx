@@ -41,10 +41,11 @@ export default function TermsPage() {
             <p>
               Core Productions provides live event production, audio visual
               services, lighting design, sound engineering, set and stage
-              design, videography, video production, storyboarding and
-              post-production services as described in each accepted
-              quotation. The scope of services is defined in the relevant
-              quotation and, where applicable, a written service agreement.
+              design, and content creation — including video production,
+              animation, scene design, content design, storyboarding and
+              post-production — as described in each accepted quotation. The
+              scope of services is defined in the relevant quotation and,
+              where applicable, a written service agreement.
             </p>
             <p>
               We reserve the right to engage qualified subcontractors in the
@@ -73,7 +74,7 @@ export default function TermsPage() {
               {[
                 "A deposit of 50% of the total quoted fee is required upon booking confirmation.",
                 "The balance is due seven (7) days prior to the event date or project commencement.",
-                "Video productions are invoiced 50% on booking, 25% on first shoot day and 25% on delivery of final files.",
+                "Content productions are invoiced 50% on booking, 25% on first production day and 25% on delivery of final files.",
                 "Invoices not paid by the due date attract interest at 2% per month on the outstanding balance.",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">

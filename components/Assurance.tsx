@@ -92,7 +92,7 @@ export function Assurance() {
         {/* Bottom note — pill */}
         <Reveal delay={0.3}>
           <div className="mt-8 flex justify-center">
-            <p className="rounded-full border border-white/[0.08] bg-ink-950/60 px-6 py-2.5 text-center text-[11px] uppercase tracking-[0.22em] text-bone/40">
+            <p className="rounded-full border border-accent/40 bg-accent/[0.07] px-6 py-2.5 text-center text-[11px] uppercase tracking-[0.22em] text-accent">
               Documentation available on request · Provided as standard to venue operators &amp; principal contractors
             </p>
           </div>

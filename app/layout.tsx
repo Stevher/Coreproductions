@@ -19,21 +19,23 @@ const dmSerif = DM_Serif_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://coreproductions.co.za"),
   title: {
-    default: "Core Productions — Audio Visual, Lighting & Video Production",
+    default: "Core Productions — Live Event Production & Content Creation",
     template: "%s · Core Productions",
   },
   description:
-    "Core Productions is South Africa's full-spectrum production partner — world-class live events and brand film production from a single team.",
+    "Core Productions is South Africa's full-spectrum production partner — world-class live events and full-service content creation from a single team.",
   keywords: [
-    "audio visual",
-    "video production",
-    "videography",
-    "storyboarding",
-    "video editing",
-    "lighting",
-    "sound",
     "live events",
-    "corporate video",
+    "audio visual",
+    "lighting",
+    "sound engineering",
+    "set design",
+    "content creation",
+    "video production",
+    "animation",
+    "motion graphics",
+    "scene design",
+    "corporate content",
     "South Africa",
     "Cape Town",
     "Johannesburg",
@@ -41,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Core Productions — South Africa's full-spectrum production partner",
     description:
-      "Live events, brand films and end-to-end video production. Every cue, every cut. Delivered to the same standard.",
+      "Live events, video, animation and content creation. Every cue, every cut. Delivered to the same standard.",
     type: "website",
     locale: "en_ZA",
     siteName: "Core Productions",
@@ -50,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Core Productions",
     description:
-      "South Africa's full-spectrum production partner. Live events and brand film.",
+      "South Africa's full-spectrum production partner. Live events and content creation.",
   },
 };
 
@@ -62,7 +64,7 @@ const jsonLd = {
   url: "https://coreproductions.co.za",
   logo: "https://coreproductions.co.za/logo-stripped.svg",
   description:
-    "South Africa's full-spectrum production partner — world-class live events and brand film production from a single team.",
+    "South Africa's full-spectrum production partner — world-class live events and full-service content creation from a single team.",
   foundingDate: "2014",
   telephone: "+27215516690",
   email: "bernard@coreproductions.co.za",
@@ -98,9 +100,13 @@ const jsonLd = {
       "Lighting Design",
       "Sound Engineering",
       "Set & Stage Design",
-      "Video & Film Production",
-      "Videography",
+      "Simultaneous Interpretation",
+      "Live Broadcast & IMAG",
+      "Content Creation",
       "Video Production",
+      "Animation & Motion Graphics",
+      "Scene Design",
+      "Content Design & Creation",
       "Storyboarding & Pre-Production",
       "Editing & Post-Production",
     ].map((name) => ({

@@ -79,7 +79,7 @@ export function Services() {
           </Reveal>
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <h2 className="display-lg max-w-2xl text-balance text-bone">
-              <RevealText text="Two disciplines. Eleven capabilities." />
+              <RevealText text="Two disciplines. Twelve capabilities." />
             </h2>
             <Reveal delay={0.2}>
               <p className="max-w-xs text-sm leading-relaxed text-bone/40 lg:text-right lg:pb-1">
