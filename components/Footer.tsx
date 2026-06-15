@@ -7,10 +7,10 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative overflow-hidden border-t border-white/[0.06] px-6 pt-24 lg:px-10">
+    <footer className="relative overflow-hidden border-t border-white/[0.06] px-6 pt-20 lg:px-10">
       <div className="mx-auto max-w-7xl">
         <Reveal>
-          <div className="flex flex-col gap-10 pb-16 md:flex-row md:items-end md:justify-between">
+          <div className="flex flex-col gap-10 pb-12 md:flex-row md:items-end md:justify-between">
             <div>
               <a href="#top" className="inline-flex items-center" aria-label="Core Productions — home">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -41,19 +41,10 @@ export function Footer() {
           </div>
         </Reveal>
 
-        {/* Oversized serif wordmark */}
-        <div className="select-none border-t border-white/[0.06] pt-10">
-          <h2
-            className="text-center text-[clamp(2.2rem,11vw,10rem)] font-display font-normal leading-none tracking-tightest text-bone/[0.04]"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
-            Core Productions
-          </h2>
-        </div>
-
-        <div className="flex flex-col items-center justify-between gap-4 py-10 text-xs text-bone/30 md:flex-row">
+        {/* Bottom bar */}
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-white/[0.06] py-8 text-xs text-bone/30 md:flex-row">
           <p>© {year} {site.name}. All rights reserved.</p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
             <a href="/privacy" className="transition-colors hover:text-bone/55">Privacy Policy</a>
             <a href="/terms" className="transition-colors hover:text-bone/55">Terms of Service</a>
             <p className="rounded-full border border-accent/40 bg-accent/[0.07] px-4 py-1.5 text-[10px] uppercase tracking-[0.22em] text-accent">

@@ -30,7 +30,8 @@ export function Hero() {
           loop
           muted
           playsInline
-          preload="auto"
+          preload="metadata"
+          poster="/hero-poster.jpg"
           aria-hidden="true"
         >
           <source src="/hero-background.mp4" type="video/mp4" />
@@ -60,25 +61,23 @@ export function Hero() {
         {/* Main headline — DM Serif Display, sized to stay above the fold */}
         <h1
           className="display-xl max-w-4xl text-bone"
-          style={{ fontSize: "clamp(2.2rem, 4.5vw, 4.8rem)" }}
+          style={{ fontSize: "clamp(2.7rem, 5.6vw, 5.8rem)" }}
         >
           {hero.title.split(" ").map((word, i) => (
-            <span
-              key={i}
-              className="inline-block overflow-hidden align-bottom leading-[1.05]"
-            >
+            <span key={i}>
               <motion.span
                 className="inline-block"
-                initial={{ y: "105%" }}
-                animate={{ y: 0 }}
+                initial={{ opacity: 0, y: "0.4em" }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{
-                  duration: 1,
+                  duration: 0.7,
                   delay: 0.3 + i * 0.07,
                   ease: [0.16, 1, 0.3, 1],
                 }}
               >
-                {word}&nbsp;
+                {word}
               </motion.span>
+              {i < hero.title.split(" ").length - 1 ? " " : ""}
             </span>
           ))}
         </h1>

@@ -43,7 +43,11 @@ type RevealTextProps = {
   delay?: number;
 };
 
-/** Word-by-word staggered reveal for headlines. */
+/**
+ * Word-by-word staggered reveal for headlines.
+ * Uses a clean opacity + rise (no overflow clipping) so letter
+ * descenders are never cut off — keeps headings crisp and tidy.
+ */
 export function RevealText({ text, className, delay = 0 }: RevealTextProps) {
   const reduce = useReducedMotion();
   const words = text.split(" ");
@@ -55,25 +59,21 @@ export function RevealText({ text, className, delay = 0 }: RevealTextProps) {
   return (
     <span className={className} aria-label={text}>
       {words.map((word, i) => (
-        <span
-          key={`${word}-${i}`}
-          className="inline-block overflow-hidden align-bottom"
-          aria-hidden
-        >
+        <span key={`${word}-${i}`} aria-hidden>
           <motion.span
             className="inline-block"
-            initial={{ y: "110%" }}
-            whileInView={{ y: 0 }}
+            initial={{ opacity: 0, y: "0.35em" }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{
-              duration: 0.85,
+              duration: 0.6,
               delay: delay + i * 0.05,
               ease: [0.16, 1, 0.3, 1],
             }}
           >
             {word}
-            {i < words.length - 1 ? " " : ""}
           </motion.span>
+          {i < words.length - 1 ? " " : ""}
         </span>
       ))}
     </span>
