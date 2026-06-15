@@ -21,7 +21,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="relative px-6 py-32 lg:px-10 lg:py-44">
+    <section id="contact" className="relative px-6 py-20 lg:px-10 lg:py-28">
       <div className="pointer-events-none absolute left-1/2 top-0 -z-10 h-[40vh] w-[60vw] -translate-x-1/2 rounded-full bg-accent/6 blur-[200px]" />
 
       <div className="mx-auto max-w-7xl">
