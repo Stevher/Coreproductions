@@ -74,16 +74,15 @@ export function Assurance() {
           </Reveal>
         </div>
 
-        {/* Standards grid */}
+        {/* Standards grid — certification headings only */}
         <div className="grid gap-px overflow-hidden rounded-2xl bg-white/[0.06] sm:grid-cols-2 lg:grid-cols-3">
           {assurance.items.map((item, i) => (
             <Reveal key={item.title} delay={i * 0.06}>
-              <div className="group flex h-full flex-col bg-ink-950 p-7 transition-all duration-300 hover:bg-ink-900/80 lg:p-8">
-                <div className="mb-5 text-accent/60 transition-colors duration-300 group-hover:text-accent">
+              <div className="group flex h-full items-center gap-4 bg-ink-950 p-6 transition-all duration-300 hover:bg-ink-900/80 lg:p-7">
+                <div className="shrink-0 text-accent/60 transition-colors duration-300 group-hover:text-accent">
                   {icons[item.title]}
                 </div>
-                <h3 className="mb-3 text-base font-semibold text-bone">{item.title}</h3>
-                <p className="text-sm leading-relaxed text-bone/45">{item.body}</p>
+                <h3 className="text-base font-semibold leading-snug text-bone">{item.title}</h3>
               </div>
             </Reveal>
           ))}

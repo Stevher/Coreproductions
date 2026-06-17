@@ -122,12 +122,12 @@ export const serviceCategories: ServiceCategory[] = [
         number: "02",
         title: "Lighting Design",
         summary:
-          "Intelligent lighting that shapes atmosphere, directs attention and elevates every moment — from the opening address of a boardroom summit to the headline set of a live concert.",
+          "Intelligent lighting that shapes atmosphere, directs attention and elevates every moment.",
         points: [
           "Full lighting concept and technical design",
           "Intelligent fixtures, moving heads & LED systems",
           "Stage, set and architectural lighting",
-          "GrandMA / MA2 show programming and live operation",
+          "grandMA3 show programming and live operation",
         ],
       },
       {
@@ -148,7 +148,7 @@ export const serviceCategories: ServiceCategory[] = [
         number: "04",
         title: "Set & Stage Design",
         summary:
-          "Bespoke staging and scenic elements that give your production a signature look and the structural confidence to execute without compromise — from boardroom launches to concert-scale builds.",
+          "Bespoke staging and scenic elements that give your production a signature look and the structural confidence to execute without compromise.",
         points: [
           "Custom stage builds, scenic construction & branding integration",
           "Rigging and structural engineering compliance",
@@ -157,16 +157,16 @@ export const serviceCategories: ServiceCategory[] = [
         ],
       },
       {
-        id: "simultaneous-interpretation",
+        id: "production-management",
         number: "05",
-        title: "Simultaneous Interpretation",
+        title: "Production Management",
         summary:
-          "Multi-language interpretation systems for international congresses, pharmaceutical events and multinational gatherings. Delegates receive broadcast-quality audio in their preferred language without any disruption to proceedings.",
+          "The discipline behind a flawless show. We plan the technical schedule, run the production office and call the show live — so every department hits its mark and your event runs exactly to time.",
         points: [
-          "ISO-compliant interpreter booths and equipment",
-          "Multi-channel headset receiver systems",
-          "Integration with conference PA and delegate microphone systems",
-          "Available for 2 to 30+ simultaneous language channels",
+          "Technical production scheduling and run sheets",
+          "Show calling and live show control",
+          "Crew, supplier and venue coordination",
+          "On-site technical direction and floor management",
         ],
       },
       {
@@ -281,7 +281,7 @@ export const assurance = {
   items: [
     {
       title: "OHS Act Compliance",
-      body: "Written risk assessments, method statements and site-specific safety plans for every production, compliant with the Occupational Health and Safety Act 85 of 1993 and the Entertainment and Diving Regulations published thereunder.",
+      body: "Written risk assessments, method statements and site-specific safety plans for every production, compliant with the Occupational Health and Safety Act 85 of 1993 and SANS 10366, the South African National Standard for health and safety at events.",
     },
     {
       title: "Structural & Rigging Certification",
@@ -350,7 +350,7 @@ export const nav = [
 
 export const stats = [
   { value: "2014", label: "Founded", sub: "Over a decade in operation" },
-  { value: "500+", label: "Live events", sub: "Nationally produced" },
+  { value: "3000+", label: "Live events", sub: "Nationally produced" },
   { value: "200+", label: "Content productions", sub: "Brand to broadcast" },
   { value: "9", label: "Provinces", sub: "Full national coverage" },
 ];
