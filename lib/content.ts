@@ -2,7 +2,7 @@ export const site = {
   name: "Core Productions",
   tagline: "Two disciplines. One standard.",
   contact: {
-    email: "bernard@coreproductions.co.za",
+    email: "info@coreproductions.co.za",
     phoneAfterHours: "083 737 5131",
     phoneAfterHoursHref: "tel:+27837375131",
     hours: "Mon–Fri · 08:00–17:00",

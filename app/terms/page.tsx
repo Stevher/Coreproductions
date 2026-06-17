@@ -206,10 +206,10 @@ export default function TermsPage() {
             </p>
             <p className="mt-3">
               <a
-                href="mailto:bernard@coreproductions.co.za"
+                href="mailto:info@coreproductions.co.za"
                 className="text-accent transition-colors hover:text-accent-light"
               >
-                bernard@coreproductions.co.za
+                info@coreproductions.co.za
               </a>
             </p>
           </LegalSection>
