@@ -67,7 +67,7 @@ const jsonLd = {
     "South Africa's full-spectrum production partner — world-class live events and full-service content creation from a single team.",
   foundingDate: "2014",
   telephone: "+27215516690",
-  email: "info@coreproductions.co.za",
+  email: "bernard@coreproductions.co.za",
   areaServed: { "@type": "Country", name: "South Africa" },
   location: [
     {
