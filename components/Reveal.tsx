@@ -15,7 +15,7 @@ type RevealProps = {
 export function Reveal({
   children,
   delay = 0,
-  y = 28,
+  y = 16,
   className,
   once = true,
 }: RevealProps) {
@@ -25,9 +25,9 @@ export function Reveal({
       className={className}
       initial={reduce ? { opacity: 0 } : { opacity: 0, y }}
       whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0 }}
-      viewport={{ once, margin: "-80px" }}
+      viewport={{ once, margin: "-40px" }}
       transition={{
-        duration: 0.7,
+        duration: 0.65,
         delay,
         ease: [0.16, 1, 0.3, 1],
       }}
@@ -62,9 +62,9 @@ export function RevealText({ text, className, delay = 0 }: RevealTextProps) {
         <span key={`${word}-${i}`} aria-hidden>
           <motion.span
             className="inline-block"
-            initial={{ opacity: 0, y: "0.35em" }}
+            initial={{ opacity: 0, y: "0.2em" }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
+            viewport={{ once: true, margin: "-30px" }}
             transition={{
               duration: 0.6,
               delay: delay + i * 0.05,
