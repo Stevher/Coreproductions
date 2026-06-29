@@ -3,21 +3,24 @@
 import { useState } from "react";
 import { cta, site } from "@/lib/content";
 import { Reveal, RevealText } from "./Reveal";
+import { sendContactEmail } from "@/app/actions/contact";
 
 export function Contact() {
-  const [sent, setSent] = useState(false);
+  const [state, setState] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
-    const name = String(data.get("name") || "");
-    const email = String(data.get("email") || "");
-    const message = String(data.get("message") || "");
-    const body = `Name: ${name}%0AEmail: ${email}%0A%0A${encodeURIComponent(message)}`;
-    window.location.href = `mailto:${site.contact.email}?subject=${encodeURIComponent(
-      `New enquiry from ${name}`,
-    )}&body=${body}`;
-    setSent(true);
+    setState("sending");
+    const formData = new FormData(e.currentTarget);
+    const result = await sendContactEmail(formData);
+    if (result.success) {
+      setState("sent");
+      (e.target as HTMLFormElement).reset();
+    } else {
+      setErrorMsg(result.error ?? "Something went wrong.");
+      setState("error");
+    }
   }
 
   return (
@@ -118,10 +121,14 @@ export function Contact() {
 
               <button
                 type="submit"
-                className="mt-8 w-full rounded-full bg-accent px-8 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-ink-950 transition-all duration-300 hover:bg-accent-light"
+                disabled={state === "sending" || state === "sent"}
+                className="mt-8 w-full rounded-full bg-accent px-8 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-ink-950 transition-all duration-300 hover:bg-accent-light disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                {sent ? "Opening your email client…" : cta.button}
+                {state === "sending" ? "Sending…" : state === "sent" ? "Enquiry sent ✓" : cta.button}
               </button>
+              {state === "error" && (
+                <p className="mt-3 text-center text-xs text-red-400">{errorMsg}</p>
+              )}
               <p className="mt-4 text-center text-xs text-bone/30">
                 Or call our Cape Town office on {site.contact.offices[0].phone} · {site.contact.hours}
               </p>
