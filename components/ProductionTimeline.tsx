@@ -86,7 +86,7 @@ export function ProductionTimeline() {
   useEffect(() => {
     function tick(now: number) {
       if (!start.current) start.current = now;
-      if (now - lastUpdate.current > 66) {
+      if (now - lastUpdate.current > 167) {
         lastUpdate.current = now;
         const elapsed = (now - start.current) % CYCLE_MS;
         setProgress((elapsed / CYCLE_MS) * 100);
