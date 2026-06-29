@@ -9,10 +9,14 @@ export function Nav() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    let rafId: number;
+    const onScroll = () => {
+      cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => setScrolled(window.scrollY > 24));
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => { window.removeEventListener("scroll", onScroll); cancelAnimationFrame(rafId); };
   }, []);
 
   return (
@@ -20,9 +24,9 @@ export function Nav() {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color] duration-500 ${
         scrolled
-          ? "border-b border-white/[0.06] bg-ink-950/90 backdrop-blur-2xl"
+          ? "border-b border-white/[0.06] bg-ink-950"
           : "border-b border-transparent"
       }`}
     >
@@ -79,7 +83,7 @@ export function Nav() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="overflow-hidden border-t border-white/[0.06] bg-ink-950/95 backdrop-blur-2xl md:hidden"
+            className="overflow-hidden border-t border-white/[0.06] bg-ink-950 md:hidden"
           >
             <div className="flex flex-col gap-1 px-6 py-6">
               {nav.map((item) => (
