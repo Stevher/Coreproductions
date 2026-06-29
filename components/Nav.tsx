@@ -47,7 +47,7 @@ export function Nav() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
         {/* Brand logo */}
-        <a href="#top" className="flex items-center" aria-label="Core Productions — home">
+        <a href="#top" className="flex items-center -ml-8 md:-ml-10" aria-label="Core Productions — home">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/logo-original.svg"
