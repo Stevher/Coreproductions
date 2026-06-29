@@ -45,7 +45,12 @@ function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               className="overflow-hidden"
             >
-              <p className="pb-6 text-base leading-relaxed text-bone/50">{a}</p>
+              <p
+                className="pb-6 text-base leading-relaxed text-bone/50"
+                style={{ background: "linear-gradient(to bottom, rgba(245,130,32,0.04), transparent)", paddingTop: "2px" }}
+              >
+                {a}
+              </p>
             </motion.div>
           )}
         </AnimatePresence>

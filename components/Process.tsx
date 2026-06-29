@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { process } from "@/lib/content";
 import { Reveal, RevealText } from "./Reveal";
 
@@ -42,9 +43,16 @@ export function Process() {
                 <Reveal key={step.number} delay={i * 0.08}>
                   <div className="group relative flex gap-7 rounded-2xl border border-white/[0.07] bg-ink-950/60 p-6 transition-all duration-500 hover:border-accent/25 hover:bg-ink-900/60 hover:shadow-[0_0_40px_rgba(245,130,32,0.07)] md:p-7">
                     {/* Step number — serif italic, large */}
-                    <span className="num-serif mt-0.5 shrink-0 text-3xl leading-none text-accent/40 transition-colors duration-300 group-hover:text-accent">
+                    <motion.span
+                      className="num-serif mt-0.5 shrink-0 text-3xl leading-none text-accent/40 transition-colors duration-300 group-hover:text-accent"
+                      initial={{ opacity: 0, scale: 0.75 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
+                      whileHover={{ filter: "drop-shadow(0 0 8px rgba(245,130,32,0.5))" }}
+                    >
                       {step.number}
-                    </span>
+                    </motion.span>
                     <div>
                       <h3 className="text-lg font-semibold tracking-tight text-bone">
                         {step.title}

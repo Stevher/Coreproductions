@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { serviceCategories, type Service, type ServiceCategory } from "@/lib/content";
 import { Reveal, RevealText } from "./Reveal";
 
@@ -36,7 +37,16 @@ function CategoryBlock({ category, index }: { category: ServiceCategory; index: 
         {/* Category header */}
         <div className={`mb-8 border-t-2 pt-6 ${index === 0 ? "border-accent" : "border-accent/40"}`}>
           <div className="flex items-baseline gap-4 mb-3">
-            <span className="num-serif text-2xl text-accent">{category.index}</span>
+            <motion.span
+              className="num-serif text-2xl text-accent"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              whileHover={{ filter: "drop-shadow(0 0 8px rgba(245,130,32,0.6))" }}
+            >
+              {category.index}
+            </motion.span>
             <div>
               <h3 className="display-md text-bone">{category.title}</h3>
               <p className="mt-1 text-[11px] font-medium uppercase tracking-[0.28em] text-bone/30">

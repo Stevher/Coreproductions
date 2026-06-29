@@ -113,7 +113,7 @@ export function Contact() {
                     name="message"
                     rows={4}
                     required
-                    className="w-full resize-none rounded-xl border border-white/[0.08] bg-ink-950/70 px-4 py-3.5 text-sm text-bone outline-none transition-colors placeholder:text-bone/25 focus:border-accent/40"
+                    className="w-full resize-none rounded-xl border border-white/[0.08] bg-ink-950/70 px-4 py-3.5 text-sm text-bone outline-none transition-colors placeholder:text-bone/25 focus:border-accent/40 focus:shadow-[0_0_0_3px_rgba(245,130,32,0.08)]"
                     placeholder="A conference, a product launch, a content campaign, or all three…"
                   />
                 </div>
@@ -181,7 +181,7 @@ function Field({
         name={name}
         type={type}
         required={required}
-        className="w-full rounded-xl border border-white/[0.08] bg-ink-950/70 px-4 py-3.5 text-sm text-bone outline-none transition-colors placeholder:text-bone/25 focus:border-accent/40"
+        className="w-full rounded-xl border border-white/[0.08] bg-ink-950/70 px-4 py-3.5 text-sm text-bone outline-none transition-colors placeholder:text-bone/25 focus:border-accent/40 focus:shadow-[0_0_0_3px_rgba(245,130,32,0.08)]"
       />
     </div>
   );

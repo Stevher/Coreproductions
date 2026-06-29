@@ -7,6 +7,7 @@ import { nav } from "@/lib/content";
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     let rafId: number;
@@ -17,6 +18,20 @@ export function Nav() {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => { window.removeEventListener("scroll", onScroll); cancelAnimationFrame(rafId); };
+  }, []);
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActiveSection(entry.target.id);
+        });
+      },
+      { rootMargin: "-35% 0px -55% 0px" }
+    );
+    sections.forEach((s) => observer.observe(s));
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -43,16 +58,25 @@ export function Nav() {
 
         {/* Desktop nav */}
         <div className="hidden items-center gap-10 md:flex">
-          {nav.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="group relative text-xs font-medium uppercase tracking-[0.2em] text-bone/55 transition-colors duration-300 hover:text-bone"
-            >
-              {item.label}
-              <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-accent transition-all duration-400 group-hover:w-full" />
-            </a>
-          ))}
+          {nav.map((item) => {
+            const isActive = activeSection === item.href.slice(1);
+            return (
+              <a
+                key={item.href}
+                href={item.href}
+                className={`group relative text-xs font-medium uppercase tracking-[0.2em] transition-colors duration-300 ${
+                  isActive ? "text-bone" : "text-bone/55 hover:text-bone"
+                }`}
+              >
+                {item.label}
+                <span
+                  className={`absolute -bottom-1.5 left-0 h-px bg-accent transition-all duration-300 ${
+                    isActive ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
+                />
+              </a>
+            );
+          })}
           <a
             href="#contact"
             className="rounded-full border border-accent/50 px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-accent transition-all duration-300 hover:bg-accent hover:text-ink-950"
@@ -91,7 +115,9 @@ export function Nav() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="py-3 text-sm font-medium uppercase tracking-[0.2em] text-bone/70 transition-colors hover:text-accent"
+                  className={`py-3 text-sm font-medium uppercase tracking-[0.2em] transition-colors hover:text-accent ${
+                    activeSection === item.href.slice(1) ? "text-accent" : "text-bone/70"
+                  }`}
                 >
                   {item.label}
                 </a>
