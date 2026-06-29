@@ -81,16 +81,11 @@ export function ProductionTimeline() {
   const [progress, setProgress] = useState(0);
   const start = useRef<number | null>(null);
   const raf = useRef<number>(0);
-  const lastUpdate = useRef(0);
-
   useEffect(() => {
     function tick(now: number) {
       if (!start.current) start.current = now;
-      if (now - lastUpdate.current > 66) {
-        lastUpdate.current = now;
-        const elapsed = (now - start.current) % CYCLE_MS;
-        setProgress((elapsed / CYCLE_MS) * 100);
-      }
+      const elapsed = (now - start.current) % CYCLE_MS;
+      setProgress((elapsed / CYCLE_MS) * 100);
       raf.current = requestAnimationFrame(tick);
     }
     raf.current = requestAnimationFrame(tick);
