@@ -220,14 +220,12 @@ export function ProductionTimeline() {
                         backgroundColor: active ? `${track.color}22` : `${track.color}0c`,
                         borderLeft: `2px solid ${track.color}${active ? "bb" : "44"}`,
                         boxShadow: active ? `0 0 14px ${track.color}28, inset 0 1px 0 ${track.color}25` : "none",
-                        transition: "background-color 0.2s, box-shadow 0.2s, border-color 0.2s",
                       }}
                     >
                       <span
                         className="truncate px-2 font-mono text-[8px] font-bold uppercase tracking-widest"
                         style={{
                           color: active ? `${track.color}ee` : `${track.color}55`,
-                          transition: "color 0.2s",
                         }}
                       >
                         {clip.label}
@@ -266,7 +264,7 @@ export function ProductionTimeline() {
         </div>
 
         {/* Status bar */}
-        <div className="flex min-h-[26px] items-center gap-2 overflow-hidden border-t border-white/[0.05] px-4 py-1.5">
+        <div className="flex h-7 items-center gap-2 overflow-hidden border-t border-white/[0.05] px-4">
           {tracks.map((track) => {
             const active = track.clips.find(isActive);
             if (!active) return null;
