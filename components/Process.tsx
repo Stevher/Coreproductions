@@ -9,6 +9,8 @@ export function Process() {
       id="process"
       className="relative border-y border-white/[0.06] bg-ink-900/30 px-6 py-20 lg:px-10 lg:py-28"
     >
+      <div className="pointer-events-none absolute left-0 top-1/2 -z-10 h-[45vh] w-[30vw] -translate-y-1/2 rounded-full bg-accent/5 blur-[180px]" />
+
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:gap-20">
 
@@ -38,7 +40,7 @@ export function Process() {
             <div className="space-y-3">
               {process.steps.map((step, i) => (
                 <Reveal key={step.number} delay={i * 0.08}>
-                  <div className="group relative flex gap-7 rounded-2xl border border-white/[0.07] bg-ink-950/60 p-6 transition-all duration-500 hover:border-accent/25 hover:bg-ink-900/60 md:p-7">
+                  <div className="group relative flex gap-7 rounded-2xl border border-white/[0.07] bg-ink-950/60 p-6 transition-all duration-500 hover:border-accent/25 hover:bg-ink-900/60 hover:shadow-[0_0_40px_rgba(245,130,32,0.07)] md:p-7">
                     {/* Step number — serif italic, large */}
                     <span className="num-serif mt-0.5 shrink-0 text-3xl leading-none text-accent/40 transition-colors duration-300 group-hover:text-accent">
                       {step.number}

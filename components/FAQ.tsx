@@ -60,6 +60,8 @@ export function FAQ() {
       id="faq"
       className="relative border-t border-white/[0.06] bg-ink-900/50 px-6 py-20 lg:px-10 lg:py-28"
     >
+      <div className="pointer-events-none absolute bottom-0 right-1/4 -z-10 h-[40vh] w-[35vw] rounded-full bg-accent/5 blur-[200px]" />
+
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
           {/* Left — sticky heading */}
