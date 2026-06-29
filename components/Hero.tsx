@@ -11,8 +11,6 @@ export function Hero() {
     target: ref,
     offset: ["start start", "end start"],
   });
-  const y = useTransform(scrollYProgress, [0, 1], [0, 80]);
-  // Fade only begins after the user has scrolled well past the text block
   const opacity = useTransform(scrollYProgress, [0.35, 0.85], [1, 0]);
 
   return (
@@ -45,7 +43,7 @@ export function Hero() {
       </div>
 
       {/* ── Text block ─────────────────────────────────── */}
-      <motion.div style={{ y, opacity }} className="mx-auto w-full max-w-7xl">
+      <motion.div style={{ opacity }} className="mx-auto w-full max-w-7xl">
 
         {/* Location eyebrow */}
         <motion.p
