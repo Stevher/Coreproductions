@@ -5,7 +5,7 @@ import { Reveal, RevealText } from "./Reveal";
 
 function ServiceCard({ service }: { service: Service }) {
   return (
-    <div className="group flex flex-col border-b border-r border-white/[0.07] bg-ink-950 p-6 transition-all duration-300 hover:bg-ink-900/60 lg:p-7">
+    <div className="group flex flex-col border-b border-r border-white/[0.07] bg-ink-950 p-6 transition-all duration-300 hover:bg-ink-900/60 hover:shadow-[inset_0_0_40px_rgba(245,130,32,0.05)] lg:p-7">
       <div className="mb-5 flex items-start justify-between gap-4">
         <span className="num-serif text-2xl leading-none text-accent/40 transition-colors duration-300 group-hover:text-accent">
           {service.number}
