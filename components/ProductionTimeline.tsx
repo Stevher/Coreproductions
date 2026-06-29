@@ -98,8 +98,8 @@ export function ProductionTimeline() {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 56 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 1.4, delay: 1.1, ease: [0.16, 1, 0.3, 1] }}
       className="relative mx-auto w-full max-w-7xl"
       style={{
