@@ -1,21 +1,12 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { hero } from "@/lib/content";
 import { ProductionTimeline } from "./ProductionTimeline";
 
 export function Hero() {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-  const opacity = useTransform(scrollYProgress, [0.35, 0.85], [1, 0]);
-
   return (
     <section
-      ref={ref}
       id="top"
       className="relative overflow-hidden px-6 pb-0 pt-24 lg:px-10"
     >
@@ -43,7 +34,7 @@ export function Hero() {
       </div>
 
       {/* ── Text block ─────────────────────────────────── */}
-      <motion.div style={{ opacity }} className="mx-auto w-full max-w-7xl">
+      <div className="mx-auto w-full max-w-7xl">
 
         {/* Location eyebrow */}
         <motion.p
@@ -153,7 +144,7 @@ export function Hero() {
             </span>
           ))}
         </motion.div>
-      </motion.div>
+      </div>
 
       {/* ── Hero stage — production timeline ───────────── */}
       <div className="mx-auto mt-10 w-full max-w-7xl">
